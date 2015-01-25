@@ -30,6 +30,7 @@ INSTALLED_APPS = (
     'django.contrib.humanize',
     'django_extensions',
     'bootstrap3',
+    'mmg.jobtrak.util',
     'mmg.jobtrak.core',
     'mmg.jobtrak.contact',
     'mmg.jobtrak.links',
