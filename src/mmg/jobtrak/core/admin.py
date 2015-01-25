@@ -10,18 +10,18 @@ class CompanyLocationInline(admin.TabularInline):
     model=CompanyLocation
     extra=1
 
-class SocialMediaForContactInline(admin.TabularInline):
-    model=SocialMediaAccount
+class WebLinkForContactInline(admin.TabularInline):
+    model=WebLinkAccount
     extra=1
     exclude=('company','company_location')
 
-class SocialMediaForCompanyInline(admin.TabularInline):
-    model=SocialMediaAccount
+class WebLinkForCompanyInline(admin.TabularInline):
+    model=WebLinkAccount
     extra=1
     exclude=('contact','company_location')
 
-class SocialMediaForCompanyLocationInline(admin.TabularInline):
-    model=SocialMediaAccount
+class WebLinkForCompanyLocationInline(admin.TabularInline):
+    model=WebLinkAccount
     extra=1
     exclude=('contact','company')
     
@@ -34,7 +34,7 @@ class CompanyAdmin(admin.ModelAdmin):
         (None, {'fields': ['name','note','company_type']}),
     ]
     list_filter=['company_type']
-    inlines=[CompanyLocationInline, SocialMediaForCompanyInline]
+    inlines=[CompanyLocationInline, WebLinkForCompanyInline]
     class Meta:
         verbose_name='Company'
         verbose_name_plural='Companies'
@@ -54,7 +54,7 @@ class ContactAdmin(admin.ModelAdmin):
             'fields': 
                 ['email_address','office_tel','mobile_tel','office_fax']}),
     ]
-    inlines=[SocialMediaForContactInline, ContactHistoryInline]
+    inlines=[WebLinkForContactInline, ContactHistoryInline]
 
 # class JobListingPersonInline(admin.TabularInline):
 #     model=JobListingPerson
@@ -180,8 +180,8 @@ admin.site.register(Country)
 admin.site.register(Address)
 admin.site.register(CompanyLocation, CompanyLocationAdmin)
 admin.site.register(CompanyType)
-admin.site.register(SocialMediaAccount)
-admin.site.register(SocialMediaType)
+admin.site.register(WebLinkAccount)
+admin.site.register(WebLinkType)
 admin.site.register(Contact, ContactAdmin)
 
 admin.site.register(JobStatus, JobStatusAdmin)
