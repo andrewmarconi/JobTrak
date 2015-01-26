@@ -12,7 +12,7 @@ echo "--> Validating Django models..."
 ./manage.py validate
 
 echo "--> Generating fixtures for current JobTrak core models..."
-./manage.py dumpdata --format=json jobtrak_core > "${ROOT_DIR}/tools/fixtures/jobtrak_core_all.json"
+./manage.py dumpdata --format=json > "${ROOT_DIR}/tools/fixtures/all.json"
 
 echo "--> Generate model map..."
 ./manage.py graph_models -a -g -o "${ROOT_DIR}/doc/model_maps/all.png"
