@@ -1,5 +1,5 @@
 """
-Django settings for JobTrak project.
+Django settings for jobtrak project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.7/topics/settings/
@@ -30,8 +30,13 @@ INSTALLED_APPS = (
     'django.contrib.humanize',
     'django_extensions',
     'bootstrap3',
-    'jobtrak_core',
-    'jobtrak_public',
+    'mmg.jobtrak.util',
+    'mmg.jobtrak.core',
+    'mmg.jobtrak.contact',
+    'mmg.jobtrak.links',
+    'mmg.jobtrak.cms',
+    'mmg.jobtrak.public',
+    'mmg.jobtrak.help',
 )
 
 ROOT_URLCONF = 'JobTrak.urls'
