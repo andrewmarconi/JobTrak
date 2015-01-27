@@ -29,6 +29,11 @@ echo "--> Generate model map..."
 ./manage.py graph_models -a -g -o "${ROOT_DIR}/doc/model_maps/all.png"
 echo ""
 
+echo "--> Compiling language files..."
+./manage.py makemessages --all
+./manage.py compilemessages
+echo ""
+
 cd "${TOOLS_APP_DIR}"
 echo "--> Generating Wiki Milestones Page..."
 ./generate_wiki_milestones.py > "${WIKI_ROOT}/Dev:-Milestones.md"

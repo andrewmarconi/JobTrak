@@ -1,0 +1,56 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: JobTrak\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-01-27 14:51-0500\n"
+"PO-Revision-Date: 2015-01-27 00:21-0500\n"
+"Last-Translator: Andrew Marconi <andrew@marconimedia.com>\n"
+"Language-Team: MMG <info@marconimedia.com>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.7.3\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: JobTrak/settings.py:126
+msgid "English"
+msgstr "English"
+
+#: JobTrak/settings.py:127
+msgid "German"
+msgstr "Deutsch"
+
+#: JobTrak/settings.py:128
+msgid "Turkish"
+msgstr "Türkçe"
+
+#: JobTrak/settings.py:129
+msgid "Spanish"
+msgstr "Español"
+
+#: files/templates/admin/base.html:31
+msgid "Welcome,"
+msgstr "Hoşgeldin,"
+
+#: files/templates/admin/base.html:37
+msgid "Documentation"
+msgstr "Belgeleme"
+
+#: files/templates/admin/base.html:40
+msgid "Change password"
+msgstr "Şifre Değiştir"
+
+#: files/templates/admin/base.html:44
+msgid "Log out"
+msgstr "Oturumu"
+
+#: files/templates/admin/base.html:58
+msgid "Home"
+msgstr "Anasafya"
