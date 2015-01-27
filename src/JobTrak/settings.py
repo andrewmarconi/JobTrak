@@ -9,17 +9,17 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 """
 
 import os
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+BASE_DIR=os.path.dirname(os.path.dirname(__file__))
 
-SECRET_KEY = 'wv9o)z07uyra13e4(c9d%6djiyjr$h7&b8y3&6z_+%r4m7+8(u'
+SECRET_KEY='wv9o)z07uyra13e4(c9d%6djiyjr$h7&b8y3&6z_+%r4m7+8(u'
 
-DEBUG = True
+DEBUG=True
 
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG=True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS=[]
 
-INSTALLED_APPS = (
+INSTALLED_APPS=(
     'django.contrib.admin',
     'django.contrib.admindocs',
     'django.contrib.auth',
@@ -39,26 +39,29 @@ INSTALLED_APPS = (
     'mmg.jobtrak.help',
 )
 
-ROOT_URLCONF = 'JobTrak.urls'
+ROOT_URLCONF='JobTrak.urls'
 
-WSGI_APPLICATION = 'JobTrak.wsgi.application'
+WSGI_APPLICATION='JobTrak.wsgi.application'
 
-MIDDLEWARE_CLASSES = (
+MIDDLEWARE_CLASSES=(
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.contrib.admindocs.middleware.XViewMiddleware',
+
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-GRAPH_MODELS = {
+GRAPH_MODELS={
     'all_applications': True,
     'group_models': True,
 }
-BOOTSTRAP3 = {
+BOOTSTRAP3={
     # The URL to the jQuery JavaScript file
     'jquery_url': '//code.jquery.com/jquery.min.js',
 
@@ -114,12 +117,19 @@ BOOTSTRAP3 = {
     },
 }
 
-TEMPLATE_CONTEXT_PROCESSORS = (
+TEMPLATE_CONTEXT_PROCESSORS=(
     'django.contrib.auth.context_processors.auth',
     'django.core.context_processors.request',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.media',
+    'django.core.context_processors.static',
+    'django.core.context_processors.tz',
+    'django.core.context_processors.debug',
+    'django.contrib.messages.context_processors.messages',
 )
 
-DATABASES = {
+
+DATABASES={
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'dj_jobtrak',
@@ -129,27 +139,42 @@ DATABASES = {
     }
 }
 
-LANGUAGE_CODE = 'en-us'
-TIME_ZONE = "America/New_York"
-USE_I18N = True
-USE_L10N = True
-USE_TZ = True
+TIME_ZONE='America/New_York'
+USE_TZ=True
 
-STATICFILES_DIRS = (
+USE_L10N=True
+USE_THOUSAND_SEPARATOR=True
+
+USE_I18N=True
+LANGUAGE_CODE='en-us'
+LANGUAGE_COOKIE_NAME='jobtrak_linga'
+ugettext=lambda s: s
+LANGUAGES = (
+    ('en', ugettext('English')),
+    ('de', ugettext('German')),
+    ('tr', ugettext('Turkish')),
+    ('es', ugettext('Spanish')),
+)
+
+LOCALE_PATHS=(
+    os.path.join(BASE_DIR,'files','locale'),
+)
+
+STATICFILES_DIRS=(
     ('libs',os.path.join(BASE_DIR,'libs')),
 )
 
-STATICFILES_FINDERS = (
+STATICFILES_FINDERS=(
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
 
-STATIC_ROOT = os.path.join(BASE_DIR,'files','static')
-STATIC_URL = '/static/'
+STATIC_ROOT=os.path.join(BASE_DIR,'files','static')
+STATIC_URL='/static/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR,'files','media')
-MEDIA_URL = '/media/'
+MEDIA_ROOT=os.path.join(BASE_DIR,'files','media')
+MEDIA_URL='/media/'
 
-TEMPLATE_DIRS = (
+TEMPLATE_DIRS=(
     os.path.join(BASE_DIR,'files','templates'),
 )
