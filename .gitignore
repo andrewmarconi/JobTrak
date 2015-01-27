@@ -44,3 +44,4 @@ src/files/static/*
 target/
 var/
 __pycache__/
+_hidden_from_git/*
