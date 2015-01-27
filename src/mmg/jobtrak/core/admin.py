@@ -71,7 +71,7 @@ class JobListingPersonInline(admin.TabularInline):
 class JobListingHistoryInline(admin.TabularInline):
     model=ActionHistory
     extra=1
-# TODO Filter user list to only those who are associated with joblisting
+# BUG - Issue #15 - Filter user list to only those who are associated with joblisting
 #     def formfield_for_foreignkey(self, db_field, request=None, **kwargs):
 #         field = super(JobListingHistoryInline, self).formfield_for_foreignkey(db_field, request, **kwargs)
 #
