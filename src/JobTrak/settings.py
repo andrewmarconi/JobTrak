@@ -52,56 +52,29 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.contrib.admindocs.middleware.XViewMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
 )
 
 GRAPH_MODELS = {
     'all_applications': True,
     'group_models': True,
 }
+
 BOOTSTRAP3 = {
-    # The URL to the jQuery JavaScript file
     'jquery_url': '//code.jquery.com/jquery.min.js',
-
-    # The Bootstrap base URL
     'base_url': '//netdna.bootstrapcdn.com/bootstrap/3.3.1/',
-
-    # The complete URL to the Bootstrap CSS file (None means derive it from base_url)
     'css_url': None,
-
-    # The complete URL to the Bootstrap CSS file (None means no theme)
     'theme_url': None,
-
-    # The complete URL to the Bootstrap JavaScript file (None means derive it from base_url)
     'javascript_url': None,
-
-    # Put JavaScript in the HEAD section of the HTML document (only relevant if you use bootstrap3.html)
     'javascript_in_head': False,
-
-    # Include jQuery with Bootstrap JavaScript (affects django-bootstrap3 template tags)
     'include_jquery': False,
-
-    # Label class to use in horizontal forms
     'horizontal_label_class': 'col-md-2',
-
-    # Field class to use in horizontal forms
     'horizontal_field_class': 'col-md-4',
-
-    # Set HTML required attribute on required fields
     'set_required': True,
-
-    # Set placeholder attributes to label if no placeholder is provided
     'set_placeholder': True,
-
-    # Class to indicate required (better to set this in your Django form)
     'required_css_class': '',
-
-    # Class to indicate error (better to set this in your Django form)
     'error_css_class': 'has-error',
-
-    # Class to indicate success, meaning the field has valid input (better to set this in your Django form)
     'success_css_class': 'has-success',
-
-    # Renderers (only set these if you have studied the source and understand the inner workings)
     'formset_renderers':{
         'default': 'bootstrap3.renderers.FormsetRenderer',
     },
@@ -117,7 +90,13 @@ BOOTSTRAP3 = {
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
     'django.core.context_processors.request',
+    'django.core.context_processors.i18n',
+#    'django.core.context_processors.media',
+#    'django.core.context_processors.static',
+#    'django.core.context_processors.tz',
+#    'django.contrib.messages.context_processors.messages',
 )
+
 
 DATABASES = {
     'default': {
@@ -129,11 +108,30 @@ DATABASES = {
     }
 }
 
-LANGUAGE_CODE = 'en-us'
-TIME_ZONE = "America/New_York"
+LANGUAGE_CODE = 'en'
+TIME_ZONE = 'America/New_York'
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
+
+USE_THOUSAND_SEPARATOR = True
+
+# LANGUAGE_COOKIE_NAME = 'jobtrak_l'
+# CSRF_COOKIE_NAME = 'jobtrak_c'
+# SESSION_COOKIE_NAME = 'jobtrak_s'
+
+ugettext = lambda s: s
+
+LANGUAGES  =  (
+    ('en', ugettext('English')),
+    ('de', ugettext('German')),
+    ('tr', ugettext('Turkish')),
+    ('es', ugettext('Spanish')),
+)
+
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR,'files','locale'),
+)
 
 STATICFILES_DIRS = (
     ('libs',os.path.join(BASE_DIR,'libs')),
