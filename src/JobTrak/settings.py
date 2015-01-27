@@ -45,15 +45,14 @@ WSGI_APPLICATION = 'JobTrak.wsgi.application'
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
-    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.contrib.admindocs.middleware.XViewMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
 )
 
 GRAPH_MODELS = {
@@ -91,11 +90,11 @@ BOOTSTRAP3 = {
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
     'django.core.context_processors.request',
-    'django.core.context_processors.media',
-    'django.core.context_processors.static',
-    'django.core.context_processors.tz',
     'django.core.context_processors.i18n',
-    'django.contrib.messages.context_processors.messages',
+#    'django.core.context_processors.media',
+#    'django.core.context_processors.static',
+#    'django.core.context_processors.tz',
+#    'django.contrib.messages.context_processors.messages',
 )
 
 
@@ -109,17 +108,17 @@ DATABASES = {
     }
 }
 
+LANGUAGE_CODE = 'en'
 TIME_ZONE = 'America/New_York'
+USE_I18N = True
+USE_L10N = True
 USE_TZ = True
 
-USE_L10N = True
 USE_THOUSAND_SEPARATOR = True
 
-USE_I18N = True
-LANGUAGE_CODE = 'en'
-LANGUAGE_COOKIE_NAME = 'jobtrak_l'
-CSRF_COOKIE_NAME = 'jobtrak_c'
-SESSION_COOKIE_NAME = 'jobtrak_s'
+# LANGUAGE_COOKIE_NAME = 'jobtrak_l'
+# CSRF_COOKIE_NAME = 'jobtrak_c'
+# SESSION_COOKIE_NAME = 'jobtrak_s'
 
 ugettext = lambda s: s
 
