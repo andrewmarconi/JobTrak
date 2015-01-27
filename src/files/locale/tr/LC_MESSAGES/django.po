@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: JobTrak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-26 23:17-0500\n"
-"PO-Revision-Date: 2015-01-26 23:50-0500\n"
+"POT-Creation-Date: 2015-01-27 01:21-0500\n"
+"PO-Revision-Date: 2015-01-27 00:21-0500\n"
 "Last-Translator: Andrew Marconi <andrew@marconimedia.com>\n"
 "Language-Team: MMG <info@marconimedia.com>\n"
 "Language: tr\n"
@@ -19,18 +19,38 @@ msgstr ""
 "X-Generator: Poedit 1.7.3\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
-#: JobTrak/settings.py:144
+#: JobTrak/settings.py:128
 msgid "English"
 msgstr "English"
 
-#: JobTrak/settings.py:145
+#: JobTrak/settings.py:129
 msgid "German"
 msgstr "Deutsch"
 
-#: JobTrak/settings.py:146
+#: JobTrak/settings.py:130
 msgid "Turkish"
-msgstr "﻿Türkçe"
+msgstr "Türkçe"
 
-#: JobTrak/settings.py:147
+#: JobTrak/settings.py:131
 msgid "Spanish"
 msgstr "Español"
+
+#: files/templates/admin/base.html:31
+msgid "Welcome,"
+msgstr "Hoşgeldin,"
+
+#: files/templates/admin/base.html:37
+msgid "Documentation"
+msgstr "Belgeleme"
+
+#: files/templates/admin/base.html:40
+msgid "Change password"
+msgstr "Şifre Değiştir"
+
+#: files/templates/admin/base.html:42
+msgid "Log out"
+msgstr "Oturumu"
+
+#: files/templates/admin/base.html:66
+msgid "Home"
+msgstr "Anasafya"
