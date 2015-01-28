@@ -72,43 +72,53 @@ class Tool():
    
     def generate_app_and_model_docs(self):
         print(self.get_header("Generate App and Model Wiki Docs in Markdown"))
+        p_filename = 'Design:-Models'
+        p_content = "### Project Models\n\n"
         for app in apps.get_apps():
             if str(app.__package__).startswith('mmg.jobtrak'):
                 print("".join(["--> Processing ",str(app.__package__),"..."]))
                 a_filename =''.join([
-                    "App:-",
-                    app.__package__.replace('.','-').replace('mmg-jobtrak-',''),
-                    ".md"
+                    "App:-", app.__package__.replace('.','-').replace('mmg-jobtrak-','')
                 ])
                 a_content = "### App: " + app.__package__.replace('mmg.jobtrak.','') + "\n"
                 a_content += "**Package**: " + str(app.__package__) + "\n\n"
+                p_content += "\n| App: [["+str(app.__package__)+"|"+a_filename+"]] |\n| :-----: |\n"
                 if len(apps.get_models(app)) > 0:
                     a_content += "| Model |\n| ----- |\n"
+                    p_content += "| "
                     for model in apps.get_models(app):
                         m_filename=''.join([
                             "Model:-", str(app.__package__).replace(".","-").replace('mmg-jobtrak-',''),
-                            "-", model._meta.object_name, ".md"])
-                        a_content += "| [[" + model._meta.object_name + "|" + m_filename + "]] |\n"
-                        m_content = "### Model: " + str(app.__package__).replace('mmg.jobtrak.','') + "\n"
-                        m_content += "**Package**: " + str(app.__package__) + "\n"
-                        m_content += "[[Back to App|" + a_filename + "]]\n\n"
+                            "-", model._meta.object_name])
+                        p_content += "[[" + model._meta.object_name + " |" + m_filename + "]] "
+                        a_content += "| [[" + model._meta.object_name + " |" + m_filename + "]] |\n"
+                        m_content = "### Model: " + model._meta.object_name + "\n"
+                        m_content += "**Package**: " + str(app.__package__) + "\n\n"
+                        m_content += "[[Back to " + app.__package__.replace('mmg.jobtrak.','') 
+                        m_content += "|" + a_filename + "]]\n\n"
                         m_content += self.generate_model_table_md(model)
                         m_content += "\n\n" + self.get_rev_date()
-                        print(" ".join(["    - Writing file:",m_filename]))
-                        f = open(self.WIKI_DIR + m_filename, 'w')
+                        print(" ".join(["    - Writing file:",m_filename+".md"]))
+                        f = open(self.WIKI_DIR + m_filename + ".md", 'w')
                         f.write(m_content)
                         f.close()
+                    p_content += " |\n\n"
                     a_content += "\n!["+str(app.__package__)+"](https://raw.githubusercontent.com/andrewmarconi/JobTrak/master/doc/model_maps/"
                     a_content += str(app.__package__).replace('.','-') + ".png)\n"
                 else: # No models.
                     a_content += "TODO: There are presently no models in this app."
                 a_content += "\n\n" + self.get_rev_date()
                 print(" ".join(["    - Writing file:", a_filename]))
-                f = open(self.WIKI_DIR + a_filename, 'w')
+                f = open(self.WIKI_DIR + a_filename + ".md", 'w')
                 f.write(a_content)
                 f.close()
             else:
                 print("".join(["--> Skipping ",str(app.__package__),"..."]))
+        p_content += "![](https://raw.githubusercontent.com/andrewmarconi/JobTrak/master/doc/model_maps/all.png"
+        p_content += "\n\n" + self.get_rev_date()
+        f = open(self.WIKI_DIR + p_filename + ".md", 'w')
+        f.write(p_content)
+        f.close()
 
     def output_instructions(self):
         print(self.get_header("That's a wrap."))
