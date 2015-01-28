@@ -21,9 +21,10 @@ echo "--> Validating Django models..."
 ./manage.py validate
 echo ""
 
-echo "--> Generating fixtures for current JobTrak core models..."
-./manage.py dumpdata --format=json > "${ROOT_DIR}/tools/fixtures/all.json"
-echo ""
+# -- skipping fixture generation to prevent sensitive data from being pushed
+#echo "--> Generating fixtures for current JobTrak core models..."
+#./manage.py dumpdata --format=json > "${ROOT_DIR}/tools/fixtures/all.json"
+#echo ""
 
 echo "--> Compiling language files..."
 ./manage.py makemessages --all

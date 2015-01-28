@@ -14,7 +14,9 @@ class Tool():
 
     WIKI_DIR = os.path.dirname(os.path.dirname(settings.BASE_DIR)) + "/JobTrak.wiki/"
     MODELGRAPH_DIR = os.path.dirname(settings.BASE_DIR) + "/doc/model_maps/"
-    
+    URL_BASE = "https://github.com/andrewmarconi/JobTrak/"
+    URL_BASE_MS = "".join([URL_BASE,'milestones/'])
+     
     # def _print_models(self):
     # """Prints out a list of models to the console."""
     #     for app in apps.get_apps():
@@ -45,6 +47,9 @@ class Tool():
         """Generates the date and time footer, displaying when the document was generated for the wiki"""
         return ''.join(["***\nUpdated: ", time.strftime("%Y-%m-%d %H:%M")])
         
+        
+        
+
     def generate_app_graphs(self):
         print(self.get_header("Generate App Model Graphs"))
         app_names=""
@@ -113,23 +118,90 @@ class Tool():
                 f = open(self.WIKI_DIR + a_filename + ".md", 'w')
                 f.write(a_content)
                 f.close()
-            else:
-                print("".join(["--> Skipping ",str(app.__package__),"..."]))
+            # else:
+            #      print("".join(["--> Skipping ",str(app.__package__),"..."]))
         p_content += "![](https://raw.githubusercontent.com/andrewmarconi/JobTrak/master/doc/model_maps/all.png)"
         p_content += "\n\n" + self.get_rev_date()
         f = open(self.WIKI_DIR + p_filename + ".md", 'w')
         f.write(p_content)
         f.close()
 
+    def generate_milestone_pages(self):
+        print(self.get_header("Generate Milestones/Issues Document"))
+        gh=Github()
+        def gen_milestone_table_head(title=""):
+            """Simple table header block."""
+            rvh  = "### %s\n" % (title)
+            rvh += "| Milestone | Open Issues | Status | Docs |\n"
+            rvh += "| :-------- | :---------: | :----- | :--: |\n"
+            return rvh
+
+        def gen_milestone_table_row(m):
+            """Simple automation of generating a table row in Markdown format."""
+            milestone_name = m['title']
+            milestone_link = self.URL_BASE_MS+urllib.quote(m['title'])
+            issues_open = float(m['open'])
+            issues_total = float(m['total'])
+            
+            if issues_total > 0:
+                progressbar_percent = int(100-(issues_open*100)/(issues_total))
+            else:
+                progressbar_percent = 100
+
+            progressbar_width = int(progressbar_percent)
+            progressbar_image_link_done="![](http://placehold.it/"+str(progressbar_width+1)+"x15/48c&text=%20)"
+            progressbar_image_link_togo="![](http://placehold.it/"+str(101-progressbar_width)+"x15/ccc&text=%20)"
+            progressbar_text = str(100-progressbar_percent)+"%"
+            doc_link = ''.join(['Milestone:-', 
+                m['title'].replace(' ','-')])
+            #print(progressbar_percent,"=",progressbar_image_link_done,progressbar_image_link_togo)
+            return "| [%s](%s) | %d of %d (%s) | %s%s | [[Docs|%s]] |\n" % (
+                milestone_name, milestone_link, 
+                issues_open, issues_total,
+                progressbar_text,
+                progressbar_image_link_done,
+                progressbar_image_link_togo,
+                doc_link
+            )
+        ms=gh.issues.milestones.list(user='andrewmarconi',repo='JobTrak',state='open')
+        m_tlf=[]
+        m_oth=[]
+        for m in ms.all():
+            m_itm={
+                'title':m.title,
+                'open':m.open_issues,
+                'total':m.open_issues+m.closed_issues
+            }
+            if m.title.startswith('TLF '):
+                m_tlf.append(m_itm)
+            else:
+                m_oth.append(m_itm)
+        m_tlf=sorted(m_tlf, key=lambda k: k['title'])
+        m_oth=sorted(m_oth, key=lambda k: k['title'])    
+        rv = gen_milestone_table_head("Top Level Features")
+        for m in m_tlf:
+            rv += gen_milestone_table_row(m)
+        rv += gen_milestone_table_head("Other Milestones")
+        for m in m_oth:
+            rv += gen_milestone_table_row(m)
+        filename = self.WIKI_DIR + "Dev:-Milestones.md"
+        print("--> Generating "+filename+"...")
+        f = open(filename, 'w')
+        f.write(rv)
+        f.close()
+        
     def output_instructions(self):
         print(self.get_header("That's a wrap."))
         print("New materials have been generated. Now, be sure to:")
         print("[ ] git add in this project for all of the model_maps.")
         print("[ ] git add in the wiki project for all of the revised docs.")
 
+
+
 def run():
     print("Running...")
     t=Tool()
     t.generate_app_and_model_docs()
     t.generate_app_graphs()
+    t.generate_milestone_pages()
     t.output_instructions()
