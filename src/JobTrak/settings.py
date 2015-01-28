@@ -55,10 +55,10 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.locale.LocaleMiddleware',
 )
 
-GRAPH_MODELS = {
-    'all_applications': True,
-    'group_models': True,
-}
+# GRAPH_MODELS = {
+#     'all_applications': True,
+#     'group_models': True,
+# }
 
 BOOTSTRAP3 = {
     'jquery_url': '//code.jquery.com/jquery.min.js',
