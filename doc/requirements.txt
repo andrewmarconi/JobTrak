@@ -23,3 +23,4 @@ simplejson==3.6.5
 six==1.9.0
 static==1.1.1
 static3==0.5.1
+transifex-client==0.10

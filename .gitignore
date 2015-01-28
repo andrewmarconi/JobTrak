@@ -14,6 +14,7 @@
 .installed.cfg
 .Python
 .tox/
+.tx/
 bin
 build/
 coverage.xml
@@ -43,5 +44,5 @@ src/files/media/*
 src/files/static/*
 target/
 var/
-__pycache__/
 _hidden_from_git/*
+__pycache__/

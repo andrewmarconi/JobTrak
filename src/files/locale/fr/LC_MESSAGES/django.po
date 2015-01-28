@@ -11,13 +11,13 @@ msgstr ""
 "POT-Creation-Date: 2015-01-28 18:22-0500\n"
 "PO-Revision-Date: 2015-01-28 22:33+0000\n"
 "Last-Translator: ajm <andrew@marconimedia.com>\n"
-"Language-Team: German (http://www.transifex.com/projects/p/jobtrak/language/"
-"de/)\n"
-"Language: de\n"
+"Language-Team: French (http://www.transifex.com/projects/p/jobtrak/language/"
+"fr/)\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Poedit 1.7.3\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
@@ -39,20 +39,20 @@ msgstr "Español"
 
 #: files/templates/admin/base.html:31
 msgid "Welcome,"
-msgstr "Willkommen,"
+msgstr ""
 
 #: files/templates/admin/base.html:37
 msgid "Documentation"
-msgstr "Dokumentation"
+msgstr ""
 
 #: files/templates/admin/base.html:40
 msgid "Change password"
-msgstr "Kennwort Ändern"
+msgstr ""
 
 #: files/templates/admin/base.html:44
 msgid "Log out"
-msgstr "Ausloggen"
+msgstr ""
 
 #: files/templates/admin/base.html:58
 msgid "Home"
-msgstr "Startseite"
+msgstr ""
