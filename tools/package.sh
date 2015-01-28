@@ -34,7 +34,6 @@ echo ""
 cd "${TOOLS_APP_DIR}"
 echo "--> Generating Dynamic Wiki Docs..."
 ./manage.py runscript generate_wiki
-# ./generate_wiki_milestones.py > "${WIKI_ROOT}/Dev:-Milestones.md"
 
 echo ""
 echo ""

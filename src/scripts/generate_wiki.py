@@ -14,9 +14,13 @@ class Tool():
 
     WIKI_DIR = os.path.dirname(os.path.dirname(settings.BASE_DIR)) + "/JobTrak.wiki/"
     MODELGRAPH_DIR = os.path.dirname(settings.BASE_DIR) + "/doc/model_maps/"
+<<<<<<< HEAD
     URL_BASE = "https://github.com/andrewmarconi/JobTrak/"
     URL_BASE_MS = "".join([URL_BASE,'milestones/'])
      
+=======
+    
+>>>>>>> a2decb9d2f9f872de0306a41bcb0af95945a202c
     # def _print_models(self):
     # """Prints out a list of models to the console."""
     #     for app in apps.get_apps():
@@ -47,9 +51,12 @@ class Tool():
         """Generates the date and time footer, displaying when the document was generated for the wiki"""
         return ''.join(["***\nUpdated: ", time.strftime("%Y-%m-%d %H:%M")])
         
+<<<<<<< HEAD
         
         
 
+=======
+>>>>>>> a2decb9d2f9f872de0306a41bcb0af95945a202c
     def generate_app_graphs(self):
         print(self.get_header("Generate App Model Graphs"))
         app_names=""
@@ -118,14 +125,20 @@ class Tool():
                 f = open(self.WIKI_DIR + a_filename + ".md", 'w')
                 f.write(a_content)
                 f.close()
+<<<<<<< HEAD
             # else:
             #      print("".join(["--> Skipping ",str(app.__package__),"..."]))
+=======
+            else:
+                print("".join(["--> Skipping ",str(app.__package__),"..."]))
+>>>>>>> a2decb9d2f9f872de0306a41bcb0af95945a202c
         p_content += "![](https://raw.githubusercontent.com/andrewmarconi/JobTrak/master/doc/model_maps/all.png)"
         p_content += "\n\n" + self.get_rev_date()
         f = open(self.WIKI_DIR + p_filename + ".md", 'w')
         f.write(p_content)
         f.close()
 
+<<<<<<< HEAD
     def generate_milestone_pages(self):
         print(self.get_header("Generate Milestones/Issues Document"))
         gh=Github()
@@ -190,18 +203,26 @@ class Tool():
         f.write(rv)
         f.close()
         
+=======
+>>>>>>> a2decb9d2f9f872de0306a41bcb0af95945a202c
     def output_instructions(self):
         print(self.get_header("That's a wrap."))
         print("New materials have been generated. Now, be sure to:")
         print("[ ] git add in this project for all of the model_maps.")
         print("[ ] git add in the wiki project for all of the revised docs.")
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> a2decb9d2f9f872de0306a41bcb0af95945a202c
 def run():
     print("Running...")
     t=Tool()
     t.generate_app_and_model_docs()
     t.generate_app_graphs()
+<<<<<<< HEAD
     t.generate_milestone_pages()
+=======
+>>>>>>> a2decb9d2f9f872de0306a41bcb0af95945a202c
     t.output_instructions()
