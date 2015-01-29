@@ -1,3 +1,4 @@
 from django.contrib import admin
-
-# Register your models here.
+from JobTrak.admin import JobTrakAdmin
+#from mmg.jobtrak.links.models import *
+#from mmg.jobtrak.core.models import *
