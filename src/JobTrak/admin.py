@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.contrib import auth
-from django.utils.translation import ugettext
+from django.utils.translation import ugettext, ugettext_lazy
 
 class LocalizedAdminSite(admin.AdminSite):
     # Translators: Admin Backend - Appears in the Browser Title Bar

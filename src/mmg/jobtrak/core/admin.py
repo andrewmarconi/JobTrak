@@ -1,4 +1,5 @@
 from django.contrib import admin
+from JobTrak.admin import JobTrakAdmin
 from mmg.jobtrak.links.models import *
 from mmg.jobtrak.core.models import *
 #from pprint import pprint
@@ -67,8 +68,6 @@ class JobListingPersonInline(admin.TabularInline):
     model=JobListingPerson
     extra=1
 
-
-    
 class JobListingHistoryInline(admin.TabularInline):
     model=ActionHistory
     extra=1
@@ -172,20 +171,21 @@ class JobListingAdmin(admin.ModelAdmin):
 #         return getattr(self, 'filters', ())
 #
 #           
+    
 
-admin.site.register(Company, CompanyAdmin)
-admin.site.register(ContactType)
-admin.site.register(ActionHistory)
-admin.site.register(Country)
-#admin.site.register(StateProvince)
-admin.site.register(Address)
-admin.site.register(CompanyLocation, CompanyLocationAdmin)
-admin.site.register(CompanyType)
+JobTrakAdmin.register(Company, CompanyAdmin)
+JobTrakAdmin.register(ContactType)
+JobTrakAdmin.register(ActionHistory)
+JobTrakAdmin.register(Country)
+#JobTrakAdmin.register(StateProvince)
+JobTrakAdmin.register(Address)
+JobTrakAdmin.register(CompanyLocation, CompanyLocationAdmin)
+JobTrakAdmin.register(CompanyType)
 
-admin.site.register(Contact, ContactAdmin)
+JobTrakAdmin.register(Contact, ContactAdmin)
 
-admin.site.register(JobStatus, JobStatusAdmin)
-admin.site.register(JobListing, JobListingAdmin)
-admin.site.register(JobListingRole)
-admin.site.register(JobListingPerson)
+JobTrakAdmin.register(JobStatus, JobStatusAdmin)
+JobTrakAdmin.register(JobListing, JobListingAdmin)
+JobTrakAdmin.register(JobListingRole)
+JobTrakAdmin.register(JobListingPerson)
 
