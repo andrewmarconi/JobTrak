@@ -20,7 +20,8 @@ TEMPLATE_DEBUG = True
 ALLOWED_HOSTS = []
 
 INSTALLED_APPS = (
-    'django.contrib.admin',
+#    'django.contrib.admin',
+    'django.contrib.admin.apps.SimpleAdminConfig',
     'django.contrib.admindocs',
     'django.contrib.auth',
     'django.contrib.contenttypes',
