@@ -2,7 +2,7 @@
 CURRENT_DIR=$(pwd)
 TOOLS_APP_DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 ROOT_DIR="$(dirname """$TOOLS_APP_DIR""")"
-#WIKI_ROOT="$(dirname """$ROOT_DIR""")/JobTrak.wiki"
+WIKI_ROOT="$(dirname """$ROOT_DIR""")/JobTrak.wiki"
 
 echo "====================================================================="
 echo "  Current Directory: ${CURRENT_DIR}"
@@ -25,10 +25,10 @@ echo "--> Validating Django models..."
 #echo ""
 
 echo "--> Handling language files..."
-./manage runscript generate_messages
+./manage.py runscript generate_messages
 
 echo "--> Generating Dynamic Wiki Docs..."
-if [ ! -d ../../JobTrak.wiki ]; then
+if [ ! -d "$WIKI_ROOT" ]; then
 	echo "    - Skipping. JobTrak.wiki repo not found."
 else
 	./manage.py runscript generate_wiki

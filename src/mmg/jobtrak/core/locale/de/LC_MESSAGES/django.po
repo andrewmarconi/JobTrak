@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: JobTrak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-28 21:02-0500\n"
+"POT-Creation-Date: 2015-01-29 11:36-0500\n"
 "PO-Revision-Date: 2015-01-29 01:22+0000\n"
 "Last-Translator: Andrew Marconi <andrew@marconimedia.com>\n"
 "Language-Team: German (http://www.transifex.com/projects/p/jobtrak/language/de/)\n"
@@ -18,10 +18,64 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: mmg/jobtrak/core/models.py:28
+#: mmg/jobtrak/core/models.py:28 mmg/jobtrak/core/models.py:69
 msgid "Role"
 msgstr "das Register"
 
 #: mmg/jobtrak/core/models.py:29
 msgid "Roles"
+msgstr ""
+
+#: mmg/jobtrak/core/models.py:37
+msgid "Order"
+msgstr ""
+
+#: mmg/jobtrak/core/models.py:41
+msgid "Jobs"
+msgstr ""
+
+#: mmg/jobtrak/core/models.py:43
+msgid "Job Status"
+msgstr ""
+
+#: mmg/jobtrak/core/models.py:44
+msgid "Job Statuses"
+msgstr ""
+
+#: mmg/jobtrak/core/models.py:54
+msgid "Referred By"
+msgstr ""
+
+#. Translators: Name of a 'contact' in a job listing
+#: mmg/jobtrak/core/models.py:68 mmg/jobtrak/core/models.py:83
+msgid "Contact"
+msgstr ""
+
+#. Translators: Reference to a single job listing
+#: mmg/jobtrak/core/models.py:71 mmg/jobtrak/core/models.py:84
+msgid "Job Listing"
+msgstr ""
+
+#: mmg/jobtrak/core/models.py:72 mmg/jobtrak/core/models.py:85
+msgid "Note"
+msgstr ""
+
+#: mmg/jobtrak/core/models.py:74
+msgid "Associated Person"
+msgstr ""
+
+#: mmg/jobtrak/core/models.py:75
+msgid "Associated People"
+msgstr ""
+
+#: mmg/jobtrak/core/models.py:82
+msgid "When"
+msgstr ""
+
+#: mmg/jobtrak/core/models.py:87
+msgid "History Item"
+msgstr ""
+
+#: mmg/jobtrak/core/models.py:88
+msgid "History Items"
 msgstr ""

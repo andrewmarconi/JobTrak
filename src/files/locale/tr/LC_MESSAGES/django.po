@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: JobTrak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-28 21:02-0500\n"
+"POT-Creation-Date: 2015-01-29 11:36-0500\n"
 "PO-Revision-Date: 2015-01-29 00:19+0000\n"
 "Last-Translator: Andrew Marconi <andrew@marconimedia.com>\n"
 "Language-Team: Turkish (http://www.transifex.com/projects/p/jobtrak/language/tr/)\n"
@@ -60,15 +60,3 @@ msgstr "Oturumu"
 #: files/templates/admin/base.html:58
 msgid "Home"
 msgstr "Anasayfa"
-
-#~ msgid "English"
-#~ msgstr "English"
-
-#~ msgid "German"
-#~ msgstr "Deutsch"
-
-#~ msgid "Turkish"
-#~ msgstr "Türkçe"
-
-#~ msgid "Spanish"
-#~ msgstr "Español"
