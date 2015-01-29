@@ -123,10 +123,11 @@ USE_THOUSAND_SEPARATOR = True
 ugettext = lambda s: s
 
 LANGUAGES  =  (
-    ('en', ugettext('English')),
-    ('de', ugettext('German')),
-    ('tr', ugettext('Turkish')),
-    ('es', ugettext('Spanish')),
+    ('en', ugettext('langselector_en')),
+    ('de', ugettext('langselector_de')),
+    ('tr', ugettext('langselector_tr')),
+    ('es', ugettext('langselector_es')),
+    ('fr', ugettext('langselector_fr')),
 )
 
 LOCALE_PATHS = (

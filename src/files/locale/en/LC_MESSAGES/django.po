@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: JobTrak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-28 18:22-0500\n"
+"POT-Creation-Date: 2015-01-28 19:11-0500\n"
 "PO-Revision-Date: 2015-01-27 00:19-0500\n"
 "Last-Translator: Andrew Marconi <andrew@marconimedia.com>\n"
 "Language-Team: MMG <info@marconimedia.com>\n"
@@ -20,20 +20,24 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 
 #: JobTrak/settings.py:126
-msgid "English"
-msgstr "English"
+msgid "langselector_en"
+msgstr ""
 
 #: JobTrak/settings.py:127
-msgid "German"
-msgstr "Deutsch"
+msgid "langselector_de"
+msgstr ""
 
 #: JobTrak/settings.py:128
-msgid "Turkish"
-msgstr "Türkçe"
+msgid "langselector_tr"
+msgstr ""
 
 #: JobTrak/settings.py:129
-msgid "Spanish"
-msgstr "Español"
+msgid "langselector_es"
+msgstr ""
+
+#: JobTrak/settings.py:130
+msgid "langselector_fr"
+msgstr ""
 
 #: files/templates/admin/base.html:31
 msgid "Welcome,"
@@ -54,3 +58,15 @@ msgstr "Log Out"
 #: files/templates/admin/base.html:58
 msgid "Home"
 msgstr "Home"
+
+#~ msgid "English"
+#~ msgstr "English"
+
+#~ msgid "German"
+#~ msgstr "Deutsch"
+
+#~ msgid "Turkish"
+#~ msgstr "Türkçe"
+
+#~ msgid "Spanish"
+#~ msgstr "Español"
