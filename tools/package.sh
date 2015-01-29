@@ -15,11 +15,9 @@ cd "${ROOT_DIR}/src"
 
 echo "--> Regenerating PIP Requirements..."
 pip freeze > "${ROOT_DIR}/doc/requirements.txt"
-echo ""
 
 echo "--> Validating Django models..."
 ./manage.py validate
-echo ""
 
 # -- skipping fixture generation to prevent sensitive data from being pushed
 #echo "--> Generating fixtures for current JobTrak core models..."
@@ -27,22 +25,7 @@ echo ""
 #echo ""
 
 echo "--> Handling language files..."
-if [ ! -f ../.tx/config ]; then
-	echo "    - Skipping language file management, since it's not configured."
-	echo "      You need the Transifex client configured. Visit this Web site"
-	echo "      for more info: http://docs.transifex.com/developer/client/"
-else
-	echo "    - Regenerating messages source file, looking for new tokens..."
-	./manage.py makemessages --all
-	echo "    - Pushing source language to Transifex..."
-	tx push -s
-	echo "    - Pulling translated languages from Transifex..."
-	tx pull -a
-	echo "    - Compiling language files into .mo archives..."
-	./manage.py compilemessages
-fi
-
-echo ""
+./manage runscript generate_messages
 
 echo "--> Generating Dynamic Wiki Docs..."
 if [ ! -d ../../JobTrak.wiki ]; then

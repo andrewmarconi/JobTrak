@@ -1,7 +1,7 @@
 from django.db import models
-from datetime import datetime
 from django.core.validators import RegexValidator
-from pprint import pprint
+from django.utils.translation import ugettext
+from datetime import datetime
 from django.contrib.humanize.templatetags.humanize import naturaltime, ordinal, intcomma, naturalday 
 from mmg.jobtrak.contact.models import *
 from mmg.jobtrak.links.models import *
@@ -25,8 +25,8 @@ class JobListingRole(models.Model):
     id=models.AutoField(primary_key=True)
     name=models.CharField(max_length=128)
     class Meta:
-        verbose_name='Role'
-        verbose_name_plural='Roles'
+        verbose_name=ugettext('Role')
+        verbose_name_plural=ugettext('Roles')
     def __unicode__(self):
         return self.name
 

@@ -8,9 +8,7 @@ import urllib, operator, time
 from JobTrak import settings
 from mmg.jobtrak import *
 
-# TODO Update milestone page generator (and move it to the Tools package) to actually write the file instead of simply outputting it to the console.
-
-class Tool():
+class GenerateWiki():
 
     WIKI_DIR = os.path.dirname(os.path.dirname(settings.BASE_DIR)) + "/JobTrak.wiki/"
     MODELGRAPH_DIR = os.path.dirname(settings.BASE_DIR) + "/doc/model_maps/"
@@ -182,9 +180,9 @@ class Tool():
         print("[ ] git add in the wiki project for all of the revised docs.")
 
 def run():
-    print("Running...")
-    t=Tool()
-    t.generate_app_and_model_docs()
-    t.generate_app_graphs()
-    t.generate_milestone_pages()
-    t.output_instructions()
+    g=GenerateWiki()
+
+    g.generate_app_and_model_docs()
+    g.generate_app_graphs()
+    g.generate_milestone_pages()
+    g.output_instructions()

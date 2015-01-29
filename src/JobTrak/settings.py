@@ -132,6 +132,14 @@ LANGUAGES  =  (
 
 LOCALE_PATHS = (
     os.path.join(BASE_DIR,'files','locale'),
+    os.path.join(BASE_DIR,'mmg','jobtrak','cms'),
+    os.path.join(BASE_DIR,'mmg','jobtrak','contact'),
+    os.path.join(BASE_DIR,'mmg','jobtrak','core'),
+    os.path.join(BASE_DIR,'mmg','jobtrak','help'),
+    os.path.join(BASE_DIR,'mmg','jobtrak','links'),
+    os.path.join(BASE_DIR,'mmg','jobtrak','profile'),
+    os.path.join(BASE_DIR,'mmg','jobtrak','public'),
+    os.path.join(BASE_DIR,'mmg','jobtrak','util'),
 )
 
 STATICFILES_DIRS = (

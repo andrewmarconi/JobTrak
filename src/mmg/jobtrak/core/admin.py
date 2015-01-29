@@ -1,4 +1,5 @@
 from django.contrib import admin
+from mmg.jobtrak.links.models import *
 from mmg.jobtrak.core.models import *
 #from pprint import pprint
 
@@ -180,8 +181,7 @@ admin.site.register(Country)
 admin.site.register(Address)
 admin.site.register(CompanyLocation, CompanyLocationAdmin)
 admin.site.register(CompanyType)
-admin.site.register(WebLinkAccount)
-admin.site.register(WebLinkType)
+
 admin.site.register(Contact, ContactAdmin)
 
 admin.site.register(JobStatus, JobStatusAdmin)
