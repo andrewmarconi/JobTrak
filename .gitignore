@@ -15,6 +15,7 @@
 .Python
 .tox/
 .tx/
+.DS_STORE
 bin
 build/
 coverage.xml
