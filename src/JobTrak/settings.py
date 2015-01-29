@@ -1,3 +1,4 @@
+# -*- coding: utf-8
 """
 Django settings for jobtrak project.
 
@@ -124,11 +125,11 @@ USE_THOUSAND_SEPARATOR = True
 ugettext = lambda s: s
 
 LANGUAGES  =  (
-    ('en', ugettext('langselector_en')),
-    ('de', ugettext('langselector_de')),
-    ('tr', ugettext('langselector_tr')),
-    ('es', ugettext('langselector_es')),
-    ('fr', ugettext('langselector_fr')),
+    ('en', u'English'),
+    ('de', u'Deutsch'),
+    ('tr', u'Türkçe'),
+    ('es', u'Español'),
+    ('fr', u'Français'),
 )
 
 LOCALE_PATHS = (

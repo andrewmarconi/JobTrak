@@ -6,7 +6,7 @@
 {% block extrastyle %}{% endblock %}
 <!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="{% block stylesheet_ie %}{% static "admin/css/ie.css" %}{% endblock %}" /><![endif]-->
 {% if LANGUAGE_BIDI %}<link rel="stylesheet" type="text/css" href="{% block stylesheet_rtl %}{% static "admin/css/rtl.css" %}{% endblock %}" />{% endif %}
-<script type="text/javascript">window.__admin_media_prefix__ = "{% filter escapejs %}{% static "admin/" %}{% endfilter %}";</script>
+<script type="text/javascript">window.__admin_media_prefix__ = "{% filter escapejs %}{% static "manager/" %}{% endfilter %}";</script>
 <script type="text/javascript">window.__admin_utc_offset__ = "{% filter escapejs %}{% now "Z" %}{% endfilter %}";</script>
 {% block extrahead %}{% endblock %}
 {% block blockbots %}<meta name="robots" content="NONE,NOARCHIVE" />{% endblock %}
@@ -28,20 +28,20 @@
         <div id="user-tools">
 
             {% block welcome-msg %}
-                {% trans 'Welcome,' %}
+                {% trans 'manager_greeting' %},
                 <strong>{% firstof user.get_short_name user.get_username %}</strong>
             {% endblock %}
             {% block userlinks %}
 			    / {% url 'django-admindocs-docroot' as docsroot %}
                 {% if docsroot %}
-                    <a href="{{ docsroot }}">{% trans 'Documentation' %}</a> /
+                    <a href="{{ docsroot }}">{% trans 'manager_docs' %}</a> /
                 {% endif %}
                 {% if user.has_usable_password %}
-                <a href="{% url 'admin:password_change' %}">{% trans 'Change password' %}</a> /
+                <a href="{% url 'admin:password_change' %}">{% trans 'manager_changepassword' %}</a> /
                 {% endif %}
 			    {% load i18n %}
 				<!-- TODO FORM ELEMENT FOR LANGUAGE -->
-                <a href="{% url 'admin:logout' %}">{% trans 'Log out' %}</a>
+                <a href="{% url 'admin:logout' %}">{% trans 'manager_logout' %}</a>
             {% endblock %}
 		
         </div>
@@ -55,7 +55,7 @@
     
 	{% block breadcrumbs %}
 	<div class="breadcrumbs">
-    <a href="{% url 'admin:index' %}">{% trans 'Home' %}</a>
+    <a href="{% url 'admin:index' %}">{% trans 'manager_home' %}</a>
     {% if title %} &rsaquo; {{ title }}{% endif %}
     </div>
     {% endblock %}
