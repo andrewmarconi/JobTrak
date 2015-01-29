@@ -3,6 +3,7 @@ from django.core.validators import RegexValidator
 from django.utils.translation import ugettext
 from datetime import datetime
 from django.contrib.humanize.templatetags.humanize import naturaltime, ordinal, intcomma, naturalday 
+
 from mmg.jobtrak.contact.models import *
 from mmg.jobtrak.links.models import *
 

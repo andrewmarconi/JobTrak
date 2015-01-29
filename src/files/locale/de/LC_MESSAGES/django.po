@@ -9,10 +9,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: JobTrak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-29 11:36-0500\n"
+"POT-Creation-Date: 2015-01-29 12:54-0500\n"
 "PO-Revision-Date: 2015-01-29 00:13+0000\n"
 "Last-Translator: Andrew Marconi <andrew@marconimedia.com>\n"
-"Language-Team: German (http://www.transifex.com/projects/p/jobtrak/language/de/)\n"
+"Language-Team: German (http://www.transifex.com/projects/p/jobtrak/language/"
+"de/)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,23 +22,38 @@ msgstr ""
 "X-Generator: Poedit 1.7.3\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
-#: JobTrak/settings.py:126
+#. Translators: Admin Backend - Appears in the Browser Title Bar
+#: JobTrak/admin.py:7
+msgid "manager_title"
+msgstr ""
+
+#. Translators: Admin Backend - Appears in the Masthead
+#: JobTrak/admin.py:9
+msgid "manager_header"
+msgstr ""
+
+#. Translators: Admin Backend - Title ("H1") of the Home Page
+#: JobTrak/admin.py:11
+msgid "manager_indextitle"
+msgstr ""
+
+#: JobTrak/settings.py:127
 msgid "langselector_en"
 msgstr "English"
 
-#: JobTrak/settings.py:127
+#: JobTrak/settings.py:128
 msgid "langselector_de"
 msgstr "Deutsch"
 
-#: JobTrak/settings.py:128
+#: JobTrak/settings.py:129
 msgid "langselector_tr"
 msgstr "Türkçe"
 
-#: JobTrak/settings.py:129
+#: JobTrak/settings.py:130
 msgid "langselector_es"
 msgstr "Español"
 
-#: JobTrak/settings.py:130
+#: JobTrak/settings.py:131
 msgid "langselector_fr"
 msgstr "Français"
 
