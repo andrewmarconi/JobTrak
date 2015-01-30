@@ -19,7 +19,7 @@
 
     {% if not is_popup %}
     <!-- Header -->
-	
+
     <div id="header">
         <div id="branding">
         {% block branding %}{% endblock %}
@@ -43,16 +43,16 @@
 				<!-- TODO FORM ELEMENT FOR LANGUAGE -->
                 <a href="{% url 'admin:logout' %}">{% trans 'manager_logout' %}</a>
             {% endblock %}
-		
+
         </div>
-		
-		
-		
+
+
+
         {% endif %}
         {% block nav-global %}{% endblock %}
     </div>
     <!-- END Header -->
-    
+
 	{% block breadcrumbs %}
 	<div class="breadcrumbs">
     <a href="{% url 'admin:index' %}">{% trans 'manager_home' %}</a>
@@ -60,7 +60,7 @@
     </div>
     {% endblock %}
     {% endif %}
-	
+
     {% block messages %}
         {% if messages %}
         <ul class="messagelist">{% for message in messages %}

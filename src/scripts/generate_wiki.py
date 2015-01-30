@@ -12,7 +12,7 @@ class GenerateWiki():
 
     WIKI_DIR = os.path.dirname(os.path.dirname(settings.BASE_DIR)) + "/JobTrak.wiki/"
     MODELGRAPH_DIR = os.path.dirname(settings.BASE_DIR) + "/doc/model_maps/"
-    URL_BASE = "https://github.com/andrewmarconi/JobTrak/"
+    URL_BASE = "https://github.com/MarconiMediaGroup/JobTrak/"
     URL_BASE_MS = "".join([URL_BASE,'milestones/'])
      
     def get_header(self,title):
@@ -93,7 +93,7 @@ class GenerateWiki():
                         f.write(m_content)
                         f.close()
                     p_content += " |\n"
-                    a_content += "\n!["+str(app.__package__)+"](https://raw.githubusercontent.com/andrewmarconi/JobTrak/master/doc/model_maps/"
+                    a_content += "\n!["+str(app.__package__)+"](https://raw.githubusercontent.com/MarconiMediaGroup/JobTrak/master/doc/model_maps/"
                     a_content += str(app.__package__).replace('.','-') + ".png)\n"
                 else: # No models.
                     p_content += " (No models in this app yet) |\n"
@@ -103,7 +103,7 @@ class GenerateWiki():
                 f = open(self.WIKI_DIR + a_filename + ".md", 'w')
                 f.write(a_content)
                 f.close()
-        p_content += "![](https://raw.githubusercontent.com/andrewmarconi/JobTrak/master/doc/model_maps/all.png)"
+        p_content += "![](https://raw.githubusercontent.com/MarconiMediaGroup/JobTrak/master/doc/model_maps/all.png)"
         p_content += "\n\n" + self.get_rev_date()
         f = open(self.WIKI_DIR + p_filename + ".md", 'w')
         f.write(p_content)
@@ -146,7 +146,7 @@ class GenerateWiki():
                 progressbar_image_link_togo,
                 doc_link
             )
-        ms=gh.issues.milestones.list(user='andrewmarconi',repo='JobTrak',state='open')
+        ms=gh.issues.milestones.list(user='MarconiMediaGroup',repo='JobTrak',state='open')
         m_tlf=[]
         m_oth=[]
         for m in ms.all():
