@@ -2,7 +2,7 @@ from django.db import models
 from django.core.validators import RegexValidator
 from django.utils.translation import ugettext, ugettext_lazy
 from datetime import datetime
-from django.contrib.humanize.templatetags.humanize import naturaltime, ordinal, intcomma, naturalday 
+from django.contrib.humanize.templatetags.humanize import naturaltime, ordinal, intcomma, naturalday
 
 from mmg.jobtrak.contact.models import *
 from mmg.jobtrak.links.models import *
@@ -39,14 +39,14 @@ class JobStatus(models.Model):
     def get_num_jobs(self):
         ct = JobListing.objects.filter(status__exact=self).count()
         return ct
-    get_num_jobs.short_description=ugettext('Jobs')
+    get_num_jobs.short_description=ugettext_lazy('Jobs')
     class Meta:
         verbose_name=ugettext_lazy('Job Status')
         verbose_name_plural=ugettext_lazy('Job Statuses')
         ordering=['order_id',]
     def __unicode__(self):
         return self.name
-    
+
 class JobListing(models.Model):
     """(Modelname description)"""
     id=models.AutoField(primary_key=True)
@@ -76,7 +76,7 @@ class JobListingPerson(models.Model):
         verbose_name_plural=ugettext_lazy('Associated People')
     def __unicode__(self):
         return ' - '.join([self.contact.first_name,self.role.name])
-        
+
 class ActionHistory(models.Model):
     """(Modelname description)"""
     id=models.AutoField(primary_key=True)

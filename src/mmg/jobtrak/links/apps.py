@@ -1,8 +1,7 @@
 from django.apps import AppConfig
 from django.utils.translation import ugettext, ugettext_lazy
 
-class LocalConfig(AppConfig):    
+class LocalConfig(AppConfig):
     name="mmg.jobtrak.links"
     # Translators: Admin Backend - Name of Links app (appears in the header bar)
-    verbose_name=ugettext_lazy("Links")
-    
+    verbose_name=ugettext_lazy("Web Links")

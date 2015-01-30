@@ -3,6 +3,16 @@ from JobTrak.admin import JobTrakAdmin
 from mmg.jobtrak.links.models import *
 from mmg.jobtrak.core.models import *
 
+class WebLinkAccountAdmin(admin.ModelAdmin):
+    list_display=[
+        'web_link_type', 'local_url_data', 'contact', 'company','company_location'
+    ]
 
-JobTrakAdmin.register(WebLinkAccount)
-JobTrakAdmin.register(WebLinkType)
+class WebLinkTypeAdmin(admin.ModelAdmin):
+    list_display=[
+        'name', 'note', 'base_url', 'get_account_count'
+    ]
+    pass
+
+JobTrakAdmin.register(WebLinkAccount, WebLinkAccountAdmin)
+JobTrakAdmin.register(WebLinkType, WebLinkTypeAdmin)

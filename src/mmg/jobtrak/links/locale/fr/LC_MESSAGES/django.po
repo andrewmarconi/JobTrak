@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: JobTrak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-30 01:25-0500\n"
+"POT-Creation-Date: 2015-01-30 01:47-0500\n"
 "PO-Revision-Date: 2015-01-29 18:49+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/jobtrak/language/fr/)\n"
@@ -19,5 +19,49 @@ msgstr ""
 
 #. Translators: Admin Backend - Name of Links app (appears in the header bar)
 #: mmg/jobtrak/links/apps.py:7
-msgid "Links"
+msgid "Web Links"
+msgstr ""
+
+#: mmg/jobtrak/links/models.py:12
+msgid "Name"
+msgstr ""
+
+#: mmg/jobtrak/links/models.py:13
+msgid "Note"
+msgstr ""
+
+#: mmg/jobtrak/links/models.py:17
+msgid "Number of Accounts"
+msgstr ""
+
+#: mmg/jobtrak/links/models.py:20
+msgid "Web Link Type"
+msgstr ""
+
+#: mmg/jobtrak/links/models.py:21
+msgid "Web Link Types"
+msgstr ""
+
+#: mmg/jobtrak/links/models.py:28
+msgid "Contact"
+msgstr ""
+
+#: mmg/jobtrak/links/models.py:29
+msgid "Company"
+msgstr ""
+
+#: mmg/jobtrak/links/models.py:30
+msgid "Company Location"
+msgstr ""
+
+#: mmg/jobtrak/links/models.py:32
+msgid "Account"
+msgstr ""
+
+#: mmg/jobtrak/links/models.py:34
+msgid "Web Link Account"
+msgstr ""
+
+#: mmg/jobtrak/links/models.py:35
+msgid "Web Link Accounts"
 msgstr ""
