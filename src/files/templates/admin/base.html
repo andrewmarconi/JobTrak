@@ -12,23 +12,19 @@
 {% block blockbots %}<meta name="robots" content="NONE,NOARCHIVE" />{% endblock %}
 </head>
 {% load i18n %}
-
 <body class="{% if is_popup %}popup {% endif %}{% block bodyclass %}{% endblock %}">
 <!-- Container -->
 <div id="container">
-
     {% if not is_popup %}
     <!-- Header -->
-
     <div id="header">
         <div id="branding">
         {% block branding %}{% endblock %}
         </div>
         {% if user.is_active and user.is_staff %}
         <div id="user-tools">
-
             {% block welcome-msg %}
-                {% trans 'manager_greeting' %},
+                {% trans 'greeting' %},
                 <strong>{% firstof user.get_short_name user.get_username %}</strong>
             {% endblock %}
             {% block userlinks %}
@@ -37,30 +33,23 @@
                     <a href="{{ docsroot }}">{% trans 'manager_docs' %}</a> /
                 {% endif %}
                 {% if user.has_usable_password %}
-                <a href="{% url 'admin:password_change' %}">{% trans 'manager_changepassword' %}</a> /
+                <a href="{% url 'admin:password_change' %}">{% trans 'changepassword' %}</a> /
                 {% endif %}
-			    {% load i18n %}
 				<!-- TODO FORM ELEMENT FOR LANGUAGE -->
-                <a href="{% url 'admin:logout' %}">{% trans 'manager_logout' %}</a>
+                <a href="{% url 'admin:logout' %}">{% trans 'logout' %}</a>
             {% endblock %}
-
         </div>
-
-
-
         {% endif %}
         {% block nav-global %}{% endblock %}
     </div>
     <!-- END Header -->
-
 	{% block breadcrumbs %}
 	<div class="breadcrumbs">
-    <a href="{% url 'admin:index' %}">{% trans 'manager_home' %}</a>
+    <a href="{% url 'admin:index' %}">{% trans 'menu_home' %}</a>
     {% if title %} &rsaquo; {{ title }}{% endif %}
     </div>
     {% endblock %}
     {% endif %}
-
     {% block messages %}
         {% if messages %}
         <ul class="messagelist">{% for message in messages %}
@@ -68,7 +57,6 @@
         {% endfor %}</ul>
         {% endif %}
     {% endblock messages %}
-
     <!-- Content -->
     <div id="content" class="{% block coltype %}colM{% endblock %}">
         {% block pretitle %}{% endblock %}
@@ -81,10 +69,8 @@
         <br class="clear" />
     </div>
     <!-- END Content -->
-
     {% block footer %}<div id="footer"></div>{% endblock %}
 </div>
 <!-- END Container -->
-
 </body>
 </html>

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: JobTrak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-30 01:47-0500\n"
+"POT-Creation-Date: 2015-02-01 23:09-0500\n"
 "PO-Revision-Date: 2015-01-27 00:19-0500\n"
 "Last-Translator: Andrew Marconi <andrew@marconimedia.com>\n"
 "Language-Team: MMG <info@marconimedia.com>\n"
@@ -83,3 +83,37 @@ msgstr "History Item"
 #: mmg/jobtrak/core/models.py:89
 msgid "History Items"
 msgstr "History Items"
+
+#: mmg/jobtrak/core/templates/jobtrak.core/contact_list.html:3
+#: mmg/jobtrak/core/templates/jobtrak.core/contact_list.html:7
+#, fuzzy
+#| msgid "Contact"
+msgid "menu_contacts"
+msgstr "Contact"
+
+#: mmg/jobtrak/core/templates/jobtrak.core/contact_list.html:3
+#: mmg/jobtrak/core/templates/jobtrak.core/index.html:3
+#: mmg/jobtrak/core/templates/jobtrak.core/job_list.html:3
+#: mmg/jobtrak/core/templates/jobtrak.core/link_list.html:3
+msgid "app_title"
+msgstr ""
+
+#: mmg/jobtrak/core/templates/jobtrak.core/contact_list.html:6
+#: mmg/jobtrak/core/templates/jobtrak.core/job_list.html:6
+#: mmg/jobtrak/core/templates/jobtrak.core/link_list.html:6
+msgid "menu_home"
+msgstr ""
+
+#: mmg/jobtrak/core/templates/jobtrak.core/index.html:3
+msgid "pagename_home"
+msgstr ""
+
+#: mmg/jobtrak/core/templates/jobtrak.core/job_list.html:3
+#: mmg/jobtrak/core/templates/jobtrak.core/job_list.html:7
+msgid "menu_joblistings"
+msgstr ""
+
+#: mmg/jobtrak/core/templates/jobtrak.core/link_list.html:3
+#: mmg/jobtrak/core/templates/jobtrak.core/link_list.html:7
+msgid "menu_links"
+msgstr ""

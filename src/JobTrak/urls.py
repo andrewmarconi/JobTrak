@@ -9,7 +9,6 @@ urlpatterns = i18n.i18n_patterns('',
 #    url(r'^admin/', include(admin.site.urls)),
     url(r'^manager/doc/', include('django.contrib.admindocs.urls')),
     url(r'^manager/', include (JobTrakAdmin.urls)),
-    url(r'^app/', include('mmg.jobtrak.core.urls')),
+    url(r'^app/', include('mmg.jobtrak.core.urls', namespace='core')),
     url(r'^$', include('mmg.jobtrak.public.urls')),
 )
-
