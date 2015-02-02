@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.template import *
 from django.conf import settings
 from django.template import Template, Library

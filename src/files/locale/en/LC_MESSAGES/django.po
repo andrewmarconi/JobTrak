@@ -1,13 +1,13 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# JobTrak App (mmg.jobtrak)
+# Copyright (C) 2015, Andrew Marconi
+# This file is distributed under the same license as the mmg.jobtrak package.
+# http://github.com/MarconiMediaGroup/JobTrak
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: JobTrak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-30 01:47-0500\n"
+"POT-Creation-Date: 2015-02-01 23:09-0500\n"
 "PO-Revision-Date: 2015-01-27 00:19-0500\n"
 "Last-Translator: Andrew Marconi <andrew@marconimedia.com>\n"
 "Language-Team: MMG <info@marconimedia.com>\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #. Translators: Admin Backend - Appears in the Browser Title Bar
 #: JobTrak/admin.py:7
-msgid "manager_title"
+msgid "app_title"
 msgstr "JobTrak"
 
 #. Translators: Admin Backend - Appears in the Masthead
@@ -29,27 +29,52 @@ msgstr "JobTrak"
 msgid "manager_header"
 msgstr "JobTrak Manager"
 
+# msgid "manager_indextitle"
 #. Translators: Admin Backend - Title ("H1") of the Home Page
 #: JobTrak/admin.py:11
-msgid "manager_indextitle"
+msgid "pagename_home"
 msgstr "Dashboard"
 
-#: files/templates/admin/base.html:31
-msgid "manager_greeting"
+#: files/templates/admin/base.html:27
+msgid "greeting"
 msgstr "Welcome"
 
-#: files/templates/admin/base.html:37
+#: files/templates/admin/base.html:33
 msgid "manager_docs"
 msgstr "Documentation"
 
-#: files/templates/admin/base.html:40
-msgid "manager_changepassword"
+#: files/templates/admin/base.html:36
+msgid "changepassword"
 msgstr "Change Password"
 
-#: files/templates/admin/base.html:44
-msgid "manager_logout"
+#: files/templates/admin/base.html:39 files/templates/base/base.html:47
+msgid "logout"
 msgstr "Log Out"
 
-#: files/templates/admin/base.html:58
-msgid "manager_home"
+#: files/templates/admin/base.html:48 files/templates/base/base.html:25
+msgid "menu_home"
 msgstr "Home"
+
+#: files/templates/base/base.html:15
+msgid "menu_togglenav"
+msgstr "Toggle Navigation"
+
+#: files/templates/base/base.html:26
+msgid "menu_joblistings"
+msgstr "My Jobs"
+
+#: files/templates/base/base.html:27
+msgid "menu_contacts"
+msgstr "My Contacts"
+
+#: files/templates/base/base.html:28
+msgid "menu_links"
+msgstr "Job Boards"
+
+#: files/templates/base/base.html:45
+msgid "menu_help"
+msgstr "Help"
+
+#: files/templates/base/base.html:46
+msgid "menu_settings"
+msgstr "Settings"
