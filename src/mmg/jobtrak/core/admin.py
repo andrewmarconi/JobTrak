@@ -7,7 +7,7 @@ from mmg.jobtrak.core.models import *
 class CompanyLocationAdmin(admin.ModelAdmin):
     list_display=('name','company','note')
     list_filter=['company']
-    
+
 class CompanyLocationInline(admin.TabularInline):
     model=CompanyLocation
     extra=1
@@ -26,12 +26,12 @@ class WebLinkForCompanyLocationInline(admin.TabularInline):
     model=WebLinkAccount
     extra=1
     exclude=('contact','company')
-    
+
 class JobStatusAdmin(admin.ModelAdmin):
     list_display=['order_id','name','get_num_jobs']
-    
+
 class CompanyAdmin(admin.ModelAdmin):
-    list_display=['name','note']
+    list_display=['name','company_type','note']
     fieldsets=[
         (None, {'fields': ['name','note','company_type']}),
     ]
@@ -44,16 +44,16 @@ class CompanyAdmin(admin.ModelAdmin):
 class ContactHistoryInline(admin.TabularInline):
     model=ActionHistory
     extra=1
-    
+
 class ContactAdmin(admin.ModelAdmin):
     list_display=('get_name_lastfirst','company','title','contact_type','get_last_contact')
     list_filter=['company__company','contact_type']
     fieldsets=[
         (None, {
-            'fields': 
+            'fields':
                 ['first_name','last_name','title','company','contact_type','birthday','note']}),
         ('Contact', {
-            'fields': 
+            'fields':
                 ['email_address','office_tel','mobile_tel','office_fax']}),
     ]
     inlines=[WebLinkForContactInline, ContactHistoryInline]
@@ -86,14 +86,14 @@ class JobListingHistoryInline(admin.TabularInline):
 #                 print "[NO]"
 #                 field.queryset = field.queryset.none()
 #         return field
-    
+
 class JobListingAdmin(admin.ModelAdmin):
     list_display=('name','company','date_posted')
     list_filter=['company__company']
     fieldsets=[
         (None, {
             'fields':
-                ['name','company','date_posted','status','description']
+                ['name','company','date_posted','status','description','sourceURL']
         }),
     ]
 #    inlines=[JobListingHistoryInline]
@@ -101,8 +101,8 @@ class JobListingAdmin(admin.ModelAdmin):
     # def get_form(self, request, obj=None, **kwargs):
     #    request._obj_ = obj
     #    return super(JobListingAdmin, self).get_form(request, obj, **kwargs)
-        
-    
+
+
 
 # class LimitedAdminInlineMixin(object):
 #     """
@@ -170,8 +170,8 @@ class JobListingAdmin(admin.ModelAdmin):
 #         """
 #         return getattr(self, 'filters', ())
 #
-#           
-    
+#
+
 
 JobTrakAdmin.register(Company, CompanyAdmin)
 JobTrakAdmin.register(ContactType)
@@ -188,4 +188,3 @@ JobTrakAdmin.register(JobStatus, JobStatusAdmin)
 JobTrakAdmin.register(JobListing, JobListingAdmin)
 JobTrakAdmin.register(JobListingRole)
 JobTrakAdmin.register(JobListingPerson)
-

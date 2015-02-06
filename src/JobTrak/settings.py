@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'mmg.jobtrak.links',
     'mmg.jobtrak.cms',
     'mmg.jobtrak.public',
+    'mmg.jobtrak.profile',
     'mmg.jobtrak.help',
 )
 
