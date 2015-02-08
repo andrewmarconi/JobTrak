@@ -88,7 +88,7 @@ class JobListingHistoryInline(admin.TabularInline):
 #         return field
 
 class JobListingAdmin(admin.ModelAdmin):
-    list_display=('name','company','date_posted')
+    list_display=('name','company','status','get_last_touch')
     list_filter=['company__company']
     fieldsets=[
         (None, {

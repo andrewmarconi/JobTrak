@@ -57,6 +57,10 @@ class JobListing(models.Model):
     date_posted=models.DateField(blank=True, null=True)
     description=models.TextField(blank=True, null=True)
     company=models.ForeignKey(CompanyLocation, blank=True, null=True)
+    def get_last_touch(self):
+        rv=ActionHistory.objects.filter(joblisting__exact=self).latest().when
+        return rv
+    get_last_touch.short_description="Last Contact"
     class Meta:
         verbose_name='Job Listing'
         verbose_name_plural='Job Listings'
