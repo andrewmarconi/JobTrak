@@ -1,5 +1,7 @@
 from django.contrib import admin
 from django.contrib import auth
+from django.contrib.auth.admin import UserAdmin, GroupAdmin
+from django.contrib.auth.models import User, Group
 from django.utils.translation import ugettext, ugettext_lazy
 
 class LocalizedAdminSite(admin.AdminSite):
@@ -12,4 +14,6 @@ class LocalizedAdminSite(admin.AdminSite):
 
 JobTrakAdmin = LocalizedAdminSite(name='JobTrakAdmin')
 admin.autodiscover()
-admin.register(auth)
+#admin.register(auth)
+JobTrakAdmin.register(User, UserAdmin)
+JobTrakAdmin.register(Group, GroupAdmin)

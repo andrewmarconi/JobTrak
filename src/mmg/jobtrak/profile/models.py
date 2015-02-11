@@ -15,4 +15,4 @@ class UserProfile(models.Model):
         verbose_name = "Profile"
         verbose_name_plural = "Profiles"
     def __unicode__(self):
-        return " ".join([self.user.first_name, self.user.last_name, '-', self.dob.strftime('%d %b, %Y')])
+        return " ".join([self.user.first_name, self.user.last_name])
