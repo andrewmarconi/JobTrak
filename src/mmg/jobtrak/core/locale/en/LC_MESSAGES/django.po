@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: JobTrak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-06 16:40-0500\n"
+"POT-Creation-Date: 2015-02-10 22:14-0500\n"
 "PO-Revision-Date: 2015-01-27 00:19-0500\n"
 "Last-Translator: Andrew Marconi <andrew@marconimedia.com>\n"
 "Language-Team: MMG <info@marconimedia.com>\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "Core"
 msgstr ""
 
-#: mmg/jobtrak/core/models.py:29 mmg/jobtrak/core/models.py:70
+#: mmg/jobtrak/core/models.py:29 mmg/jobtrak/core/models.py:74
 msgid "Role"
 msgstr "Role"
 
@@ -51,61 +51,47 @@ msgid "Referred By"
 msgstr "Referred By"
 
 #. Translators: Name of a 'contact' in a job listing
-#: mmg/jobtrak/core/models.py:69 mmg/jobtrak/core/models.py:84
+#: mmg/jobtrak/core/models.py:73 mmg/jobtrak/core/models.py:88
 msgid "Contact"
 msgstr "Contact"
 
 #. Translators: Reference to a single job listing
-#: mmg/jobtrak/core/models.py:72 mmg/jobtrak/core/models.py:85
+#: mmg/jobtrak/core/models.py:76 mmg/jobtrak/core/models.py:89
 msgid "Job Listing"
 msgstr "Job Listing"
 
-#: mmg/jobtrak/core/models.py:73 mmg/jobtrak/core/models.py:86
+#: mmg/jobtrak/core/models.py:77 mmg/jobtrak/core/models.py:90
 msgid "Note"
 msgstr "Note"
 
-#: mmg/jobtrak/core/models.py:75
+#: mmg/jobtrak/core/models.py:79
 msgid "Associated Person"
 msgstr "Associated Person"
 
-#: mmg/jobtrak/core/models.py:76
+#: mmg/jobtrak/core/models.py:80
 msgid "Associated People"
 msgstr "Associated People"
 
-#: mmg/jobtrak/core/models.py:83
+#: mmg/jobtrak/core/models.py:87
 msgid "When"
 msgstr "When"
 
-#: mmg/jobtrak/core/models.py:88
+#: mmg/jobtrak/core/models.py:92
 msgid "History Item"
 msgstr "History Item"
 
-#: mmg/jobtrak/core/models.py:89
+#: mmg/jobtrak/core/models.py:93
 msgid "History Items"
 msgstr "History Items"
 
-#: mmg/jobtrak/core/templates/jobtrak.core/contact_list.html:3
-#: mmg/jobtrak/core/templates/jobtrak.core/contact_list.html:7
-#, fuzzy
-#| msgid "Contact"
-msgid "menu_contacts"
-msgstr "Contact"
+#: mmg/jobtrak/core/templates/jobtrak.core/index.html:3
+msgid "pagename_home"
+msgstr ""
 
-#: mmg/jobtrak/core/templates/jobtrak.core/contact_list.html:3
 #: mmg/jobtrak/core/templates/jobtrak.core/index.html:3
 #: mmg/jobtrak/core/templates/jobtrak.core/job_list.html:3
 #: mmg/jobtrak/core/templates/jobtrak.core/link_list.html:3
 msgid "app_title"
-msgstr ""
-
-#: mmg/jobtrak/core/templates/jobtrak.core/contact_list.html:6
-#: mmg/jobtrak/core/templates/jobtrak.core/job_list.html:6
-#: mmg/jobtrak/core/templates/jobtrak.core/link_list.html:6
-msgid "menu_home"
-msgstr ""
-
-#: mmg/jobtrak/core/templates/jobtrak.core/index.html:3
-msgid "pagename_home"
 msgstr ""
 
 #: mmg/jobtrak/core/templates/jobtrak.core/job_list.html:3
@@ -113,7 +99,17 @@ msgstr ""
 msgid "menu_joblistings"
 msgstr ""
 
+#: mmg/jobtrak/core/templates/jobtrak.core/job_list.html:6
+#: mmg/jobtrak/core/templates/jobtrak.core/link_list.html:6
+msgid "menu_home"
+msgstr ""
+
 #: mmg/jobtrak/core/templates/jobtrak.core/link_list.html:3
 #: mmg/jobtrak/core/templates/jobtrak.core/link_list.html:7
 msgid "menu_links"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Contact"
+#~ msgid "menu_contacts"
+#~ msgstr "Contact"

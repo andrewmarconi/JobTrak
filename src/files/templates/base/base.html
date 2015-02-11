@@ -24,7 +24,7 @@
 			<ul class="nav navbar-nav">
 				<li><a href="{% url 'core:index' %}">{% trans 'menu_home' %}</a></li>
 				<li><a href="{% url 'core:job_list' %}">{% trans 'menu_joblistings' %}</a></li>
-				<li><a href="{% url 'core:contact_list' %}">{% trans 'menu_contacts' %}</a></li>
+				<li><a href="{% url 'contact:contact_list' %}">{% trans 'menu_contacts' %}</a></li>
 				<li><a href="{% url 'core:link_list' %}">{% trans 'menu_links' %}</a></li>
 <!--
 				<li class="dropdown">
@@ -53,8 +53,10 @@
 </nav>
 {% endif %}
 <div class="container">
+	<div class="row">
 		{% block breadcrumb %}{% endblock %}
     {% bootstrap_messages %}
+	</div>
     {% block content %}(no content){% endblock %}
 </div>
 <!-- TODO: Footer will go here. -->
@@ -74,4 +76,5 @@
 			padding-top: 70px;
 		}
 	</style>
+	{% block extra_head %}{% endblock %}
 {% endblock %}

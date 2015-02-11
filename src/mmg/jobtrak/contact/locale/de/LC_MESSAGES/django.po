@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: JobTrak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-06 16:40-0500\n"
+"POT-Creation-Date: 2015-02-10 22:14-0500\n"
 "PO-Revision-Date: 2015-01-29 18:48+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German (http://www.transifex.com/projects/p/jobtrak/language/de/)\n"
@@ -18,6 +18,150 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Translators: Admin Backend - Name of Contact app (appears in the header bar)
-#: mmg/jobtrak/contact/apps.py:7
+#: mmg/jobtrak/contact/apps.py:7 mmg/jobtrak/contact/models.py:176
 msgid "Contact"
+msgstr ""
+
+#: mmg/jobtrak/contact/models.py:14
+msgid "ISO Code"
+msgstr ""
+
+#: mmg/jobtrak/contact/models.py:18 mmg/jobtrak/contact/models.py:63
+#: mmg/jobtrak/contact/models.py:76 mmg/jobtrak/contact/models.py:95
+#: mmg/jobtrak/contact/models.py:125
+msgid "Name"
+msgstr ""
+
+#: mmg/jobtrak/contact/models.py:20
+msgid "Country"
+msgstr ""
+
+#: mmg/jobtrak/contact/models.py:21
+msgid "Countries"
+msgstr ""
+
+#: mmg/jobtrak/contact/models.py:29
+msgid "Address Line 1"
+msgstr ""
+
+#: mmg/jobtrak/contact/models.py:32
+msgid "Address line 2"
+msgstr ""
+
+#: mmg/jobtrak/contact/models.py:38
+msgid "City"
+msgstr ""
+
+#: mmg/jobtrak/contact/models.py:42
+msgid "State/Province"
+msgstr ""
+
+#: mmg/jobtrak/contact/models.py:48
+msgid "Postal Code"
+msgstr ""
+
+#: mmg/jobtrak/contact/models.py:50
+msgid "Address"
+msgstr ""
+
+#: mmg/jobtrak/contact/models.py:51
+msgid "Addresses"
+msgstr ""
+
+#: mmg/jobtrak/contact/models.py:65
+msgid "Company Type"
+msgstr ""
+
+#: mmg/jobtrak/contact/models.py:66
+msgid "Company Types"
+msgstr ""
+
+#: mmg/jobtrak/contact/models.py:80 mmg/jobtrak/contact/models.py:113
+#: mmg/jobtrak/contact/models.py:174
+msgid "Note"
+msgstr ""
+
+#: mmg/jobtrak/contact/models.py:86
+msgid "Company"
+msgstr ""
+
+#: mmg/jobtrak/contact/models.py:87
+msgid "Companies"
+msgstr ""
+
+#: mmg/jobtrak/contact/models.py:104 mmg/jobtrak/contact/models.py:157
+msgid "Office Phone"
+msgstr ""
+
+#: mmg/jobtrak/contact/models.py:109 mmg/jobtrak/contact/models.py:167
+msgid "Office Fax"
+msgstr ""
+
+#: mmg/jobtrak/contact/models.py:115
+msgid "Company Location"
+msgstr ""
+
+#: mmg/jobtrak/contact/models.py:116
+msgid "Company Locations"
+msgstr ""
+
+#: mmg/jobtrak/contact/models.py:127
+msgid "Contact Type"
+msgstr ""
+
+#: mmg/jobtrak/contact/models.py:128
+msgid "Contact Types"
+msgstr ""
+
+#: mmg/jobtrak/contact/models.py:137
+msgid "First Name"
+msgstr ""
+
+#: mmg/jobtrak/contact/models.py:140
+msgid "Last Name"
+msgstr ""
+
+#: mmg/jobtrak/contact/models.py:146
+msgid "Title"
+msgstr ""
+
+#: mmg/jobtrak/contact/models.py:150
+msgid "E-Mail Address"
+msgstr ""
+
+#: mmg/jobtrak/contact/models.py:162
+msgid "Mobile Phone"
+msgstr ""
+
+#: mmg/jobtrak/contact/models.py:171
+msgid "Birthday"
+msgstr ""
+
+#: mmg/jobtrak/contact/models.py:177
+msgid "Contacts"
+msgstr ""
+
+#: mmg/jobtrak/contact/models.py:180 mmg/jobtrak/contact/models.py:184
+msgid "Full Name"
+msgstr ""
+
+#: mmg/jobtrak/contact/models.py:200
+msgid "Last Contact"
+msgstr ""
+
+#: mmg/jobtrak/contact/templates/jobtrak.contact/detail.html:4
+#: mmg/jobtrak/contact/templates/jobtrak.contact/detail.html:10
+#: mmg/jobtrak/contact/templates/jobtrak.contact/list.html:4
+#: mmg/jobtrak/contact/templates/jobtrak.contact/list.html:10
+msgid "menu_contacts"
+msgstr ""
+
+#: mmg/jobtrak/contact/templates/jobtrak.contact/detail.html:4
+#: mmg/jobtrak/contact/templates/jobtrak.contact/list.html:4
+msgid "app_title"
+msgstr ""
+
+#: mmg/jobtrak/contact/templates/jobtrak.contact/detail.html:9
+#: mmg/jobtrak/contact/templates/jobtrak.contact/list.html:9
+msgid "menu_home"
 msgstr ""
