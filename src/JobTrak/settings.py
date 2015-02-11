@@ -129,11 +129,15 @@ USE_THOUSAND_SEPARATOR = True
 ugettext = lambda s: s
 
 LANGUAGES  =  (
-    ('en', u'English'),
     ('de', u'Deutsch'),
-    ('tr', u'Türkçe'),
+    ('nl', u'Dutch'),
+    ('en', u'English'),
     ('es', u'Español'),
+    ('fi', u'Finnish'),
     ('fr', u'Français'),
+    ('it', u'Italian'),
+    ('sv', u'Swedish'),
+    ('tr', u'Türkçe'),
 )
 
 LOCALE_PATHS = (
