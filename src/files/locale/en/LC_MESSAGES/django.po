@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: JobTrak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-10 22:38-0500\n"
+"POT-Creation-Date: 2015-09-05 20:17-0400\n"
 "PO-Revision-Date: 2015-01-27 00:19-0500\n"
 "Last-Translator: Andrew Marconi <andrew@marconimedia.com>\n"
 "Language-Team: MMG <info@marconimedia.com>\n"
@@ -20,18 +20,18 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 
 #. Translators: Admin Backend - Appears in the Browser Title Bar
-#: JobTrak/admin.py:7
+#: JobTrak/admin.py:9
 msgid "app_title"
 msgstr "JobTrak"
 
 #. Translators: Admin Backend - Appears in the Masthead
-#: JobTrak/admin.py:9
+#: JobTrak/admin.py:11
 msgid "manager_header"
 msgstr "JobTrak Manager"
 
 # msgid "manager_indextitle"
 #. Translators: Admin Backend - Title ("H1") of the Home Page
-#: JobTrak/admin.py:11
+#: JobTrak/admin.py:13
 msgid "pagename_home"
 msgstr "Dashboard"
 
