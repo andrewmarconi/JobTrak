@@ -106,12 +106,16 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 
 DATABASES = {
 	'default': {
-		'ENGINE': 'django.db.backends.mysql',
-		'NAME': 'dj_jobtrak',
-		'USER': 'django',
-		'PASSWORD': 'django',
-		'HOST': '/opt/local/var/run/mariadb-10.0/mysqld.sock',
+		'ENGINE': 'django.db.backends.sqlite3',
+		'NAME': 'jobtrak.sqlite3',
 	}
+	# 'default': {
+	# 	'ENGINE': 'django.db.backends.mysql',
+	# 	'NAME': 'dj_jobtrak',
+	# 	'USER': 'django',
+	# 	'PASSWORD': 'django',
+	# 	'HOST': '/opt/local/var/run/mariadb-10.0/mysqld.sock',
+	# }
 }
 
 LANGUAGE_CODE = 'en'
