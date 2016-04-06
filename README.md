@@ -8,3 +8,7 @@
 [![License](http://img.shields.io/badge/License-Apache_2.0-blue.svg)](http://www.apache.org/licenses/LICENSE-2)
 
 See the [JobTrak Wiki](https://github.com/MarconiMediaGroup/JobTrak/wiki) for details.
+
+## Compatibility
+
+Some required packages crash when installed by python 3.4, so for the time being, we're only support python 2.7.
