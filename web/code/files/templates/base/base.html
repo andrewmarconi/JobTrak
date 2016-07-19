@@ -1,0 +1,78 @@
+{% extends 'base/bootstrap.html' %}
+{% load bootstrap3 %}
+{% load i18n %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{% block bootstrap3_content %}
+{% if user.is_authenticated %}
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container-fluid">
+    	<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">{% trans 'menu_togglenav' %}</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand">JobTrak</a>
+		</div>
+
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li><a href="{% url 'core:index' %}">{% trans 'menu_home' %}</a></li>
+				<li><a href="{% url 'core:job_list' %}">{% trans 'menu_joblistings' %}</a></li>
+				<li><a href="{% url 'contact:contact_list' %}">{% trans 'menu_contacts' %}</a></li>
+				<li><a href="{% url 'core:link_list' %}">{% trans 'menu_links' %}</a></li>
+<!--
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Menu Item <span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="#">Item</a></li>
+						<li><a href="#">Item</a></li>
+						<li><a href="#">Item</a></li>
+					</ul>
+				</li>
+//-->
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"
+						role="button" aria-expanded="false"><img class="gravatar" src="http://www.gravatar.com/avatar/5eb177439e0abfeb0d074b67deea792c?s=24" alt="" /> {% firstof user.get_short_name user.get_username %} <span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="#">{% trans 'menu_help' %}</a></li>
+						<li><a href="#">{% trans 'menu_settings' %}</a></li>
+						<li><a href="#">{% trans 'logout' %}</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+{% endif %}
+<div class="container">
+	<div class="row">
+		{% block breadcrumb %}{% endblock %}
+    {% bootstrap_messages %}
+	</div>
+    {% block content %}(no content){% endblock %}
+</div>
+<!-- TODO: Footer will go here. -->
+{% endblock %}
+
+{
+{% block bootstrap3_extra_head %}
+	<style>
+		.gravatar {
+			-webkit-border-radius: 25%;
+			-moz-border-radius: 25%;
+			-ms-border-radius: 25%;
+			-o-border-radius: 25%;
+			border-radius: 25%;
+		}
+		body {
+			padding-top: 70px;
+		}
+	</style>
+	{% block extra_head %}{% endblock %}
+{% endblock %}
