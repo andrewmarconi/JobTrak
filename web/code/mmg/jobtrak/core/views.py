@@ -26,10 +26,3 @@ def contact_list(request):
     else:
         context = {}
         return render(request, 'jobtrak.core/contact_list.html', context)
-
-def link_list(request):
-    if not request.user.is_authenticated():
-        return redirect(reverse('public.views.index'))
-    else:
-        context = {}
-        return render(request, 'jobtrak.core/link_list.html', context)

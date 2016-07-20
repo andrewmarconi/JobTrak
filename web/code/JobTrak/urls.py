@@ -12,6 +12,7 @@ urlpatterns = [
 
 urlpatterns += i18n.i18n_patterns(
     url(r'^app/contact/', include('mmg.jobtrak.contact.urls', namespace='contact')),
+    url(r'^app/jobboards/', include('mmg.jobtrak.links.urls', namespace='jobboard')),
     url(r'^app/', include('mmg.jobtrak.core.urls', namespace='core')),
     url(r'^', include('mmg.jobtrak.public.urls')),
 )
