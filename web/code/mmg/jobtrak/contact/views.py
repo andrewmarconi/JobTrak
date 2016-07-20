@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.template import *
 from django.conf import settings
 from django.template import Template, Library
-from django_tables2   import RequestConfig
+from django_tables2 import RequestConfig
 from django.core.urlresolvers import reverse
 from mmg.jobtrak.contact.models import *
 from mmg.jobtrak.contact.tables import *

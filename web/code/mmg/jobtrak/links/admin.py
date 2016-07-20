@@ -12,7 +12,10 @@ class WebLinkTypeAdmin(admin.ModelAdmin):
     list_display=[
         'name', 'note', 'base_url', 'get_account_count'
     ]
+
+class JobBoardAdmin(admin.ModelAdmin):
     pass
 
 JobTrakAdmin.register(WebLinkAccount, WebLinkAccountAdmin)
 JobTrakAdmin.register(WebLinkType, WebLinkTypeAdmin)
+JobTrakAdmin.register(JobBoard, JobBoardAdmin)

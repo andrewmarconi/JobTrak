@@ -1,7 +1,8 @@
 from django.db import models
 from datetime import datetime
 from django.core.validators import RegexValidator
-from django.utils.translation import ugettext, ugettext_lazy
+from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import pgettext_lazy
 from django.contrib.humanize.templatetags.humanize import naturaltime, ordinal, intcomma, naturalday
 from mmg.jobtrak.core.models import *
 from mmg.jobtrak.contact.models import *
@@ -9,16 +10,17 @@ from mmg.jobtrak.contact.models import *
 class WebLinkType(models.Model):
     """Social Media Connections"""
     id=models.AutoField(primary_key=True)
-    name=models.CharField(max_length=128, verbose_name=ugettext_lazy('Name'))
-    note=models.CharField(max_length=255, blank=True, null=True, verbose_name=ugettext_lazy('Note'))
-    base_url=models.URLField(blank=True, null=True, verbose_name='Base URL')
+    name=models.CharField(_("Name"), max_length=128)
+    note=models.CharField(_("Note"), max_length=255, blank=True, null=True)
+    base_url=models.URLField(_("Base URL"), blank=True, null=True)
     def get_account_count(self):
+        # TODO get_account_count method
         return 0
-    get_account_count.short_description=ugettext_lazy('Number of Accounts')
+    get_account_count.short_description=_('Number of Accounts')
 
     class Meta:
-        verbose_name=ugettext_lazy('Web Link Type')
-        verbose_name_plural=ugettext_lazy('Web Link Types')
+        verbose_name=_('Web Link Type')
+        verbose_name_plural=_('Web Link Types')
     def __unicode__(self):
         return self.name
 
@@ -35,3 +37,14 @@ class WebLinkAccount(models.Model):
         verbose_name_plural=ugettext_lazy('Web Link Accounts')
     def __unicode__(self):
         return ' - '.join([self.web_link_type.name,self.local_url_data])
+
+class JobBoard(models.Model):
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(_("Name"), max_length=128)
+    note = models.TextField(_("Note"), blank=True)
+    url = models.URLField(_("URL"))
+    class Meta:
+        verbose_name=_("Job Board")
+        verbose_name_plural=(_("Job Boards"))
+    def __unicode__(self):
+        return self.name
