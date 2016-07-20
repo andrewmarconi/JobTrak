@@ -11,4 +11,4 @@ See the [JobTrak Wiki](https://github.com/MarconiMediaGroup/JobTrak/wiki) for de
 
 ## Compatibility
 
-Some required packages crash when installed by python 3.4, so for the time being, we're only support python 2.7.
+Some required packages crash when installed under Python 3.x -- so for the time being, we're only targeting Python 2.7.x.
