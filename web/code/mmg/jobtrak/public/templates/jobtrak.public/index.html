@@ -1,5 +1,9 @@
 {% extends "base/base.html" %}
-{% block title %}{{ trans }}{% endblock %}
+{% load i18n %}
+{% block title %}{% trans 'Welcome' %}{% endblock %}
+
+{% block breadcrumb %}{% endblock %}
+
 {% block content %}
-[Public Page]
+[ Public Home ]
 {% endblock %}

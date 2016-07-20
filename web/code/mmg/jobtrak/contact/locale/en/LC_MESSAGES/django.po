@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-04 15:32-0400\n"
+"POT-Creation-Date: 2016-07-20 13:31-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -138,6 +138,10 @@ msgid "Birthday"
 msgstr ""
 
 #: mmg/jobtrak/contact/models.py:177
+#: mmg/jobtrak/contact/templates/jobtrak.contact/detail.html:4
+#: mmg/jobtrak/contact/templates/jobtrak.contact/detail.html:10
+#: mmg/jobtrak/contact/templates/jobtrak.contact/list.html:4
+#: mmg/jobtrak/contact/templates/jobtrak.contact/list.html:10
 msgid "Contacts"
 msgstr ""
 
@@ -149,19 +153,7 @@ msgstr ""
 msgid "Last Contact"
 msgstr ""
 
-#: mmg/jobtrak/contact/templates/jobtrak.contact/detail.html:4
-#: mmg/jobtrak/contact/templates/jobtrak.contact/detail.html:10
-#: mmg/jobtrak/contact/templates/jobtrak.contact/list.html:4
-#: mmg/jobtrak/contact/templates/jobtrak.contact/list.html:10
-msgid "menu_contacts"
-msgstr ""
-
-#: mmg/jobtrak/contact/templates/jobtrak.contact/detail.html:4
-#: mmg/jobtrak/contact/templates/jobtrak.contact/list.html:4
-msgid "app_title"
-msgstr ""
-
 #: mmg/jobtrak/contact/templates/jobtrak.contact/detail.html:9
 #: mmg/jobtrak/contact/templates/jobtrak.contact/list.html:9
-msgid "menu_home"
+msgid "Home"
 msgstr ""

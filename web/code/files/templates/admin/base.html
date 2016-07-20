@@ -1,4 +1,4 @@
-{% load admin_static %}{% load firstof from future %}<!DOCTYPE html>
+{% load admin_static %}<!DOCTYPE html>
 <html lang="{{ LANGUAGE_CODE|default:"en-us" }}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
 <head>
 <title>{% block title %}{% endblock %}</title>
@@ -24,19 +24,19 @@
         {% if user.is_active and user.is_staff %}
         <div id="user-tools">
             {% block welcome-msg %}
-                {% trans 'greeting' %},
+                {% trans 'Welcome' %},
                 <strong>{% firstof user.get_short_name user.get_username %}</strong>
             {% endblock %}
             {% block userlinks %}
 			    / {% url 'django-admindocs-docroot' as docsroot %}
                 {% if docsroot %}
-                    <a href="{{ docsroot }}">{% trans 'manager_docs' %}</a> /
+                    <a href="{{ docsroot }}">{% trans 'Documentation' %}</a> /
                 {% endif %}
                 {% if user.has_usable_password %}
-                <a href="{% url 'admin:password_change' %}">{% trans 'changepassword' %}</a> /
+                <a href="{% url 'admin:password_change' %}">{% trans 'Change Password' %}</a> /
                 {% endif %}
 				<!-- TODO FORM ELEMENT FOR LANGUAGE -->
-                <a href="{% url 'admin:logout' %}">{% trans 'logout' %}</a>
+                <a href="{% url 'admin:logout' %}">{% trans 'Log Out' %}</a>
             {% endblock %}
         </div>
         {% endif %}
@@ -45,7 +45,7 @@
     <!-- END Header -->
 	{% block breadcrumbs %}
 	<div class="breadcrumbs">
-    <a href="{% url 'admin:index' %}">{% trans 'menu_home' %}</a>
+    <a href="{% url 'admin:index' %}">{% trans 'Home' %}</a>
     {% if title %} &rsaquo; {{ title }}{% endif %}
     </div>
     {% endblock %}

@@ -1,81 +1,69 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-# Translators:
-# Andrew Marconi <andrew@marconimedia.com>, 2015
-# Andrew Marconi <andrew@marconimedia.com>, 2015
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: JobTrak\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-04 15:32-0400\n"
-"PO-Revision-Date: 2015-01-29 19:03+0000\n"
-"Last-Translator: Andrew Marconi <andrew@marconimedia.com>\n"
-"Language-Team: German (http://www.transifex.com/projects/p/jobtrak/language/de/)\n"
-"Language: de\n"
+"POT-Creation-Date: 2016-07-20 13:31-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.7.3\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-
-#. Translators: Admin Backend - Appears in the Browser Title Bar
-#: JobTrak/admin.py:9
-msgid "app_title"
-msgstr ""
 
 #. Translators: Admin Backend - Appears in the Masthead
 #: JobTrak/admin.py:11
-msgid "manager_header"
+msgid "JobTrak"
 msgstr ""
 
 #. Translators: Admin Backend - Title ("H1") of the Home Page
-#: JobTrak/admin.py:13
-msgid "pagename_home"
-msgstr ""
-
-#: files/templates/admin/base.html:27
-msgid "greeting"
+#: JobTrak/admin.py:13 files/templates/admin/base.html:27
+msgid "Welcome"
 msgstr ""
 
 #: files/templates/admin/base.html:33
-msgid "manager_docs"
+msgid "Documentation"
 msgstr ""
 
 #: files/templates/admin/base.html:36
-msgid "changepassword"
+msgid "Change Password"
 msgstr ""
 
-#: files/templates/admin/base.html:39 files/templates/base/base.html:47
-msgid "logout"
+#: files/templates/admin/base.html:39 files/templates/base/base.html:44
+msgid "Log Out"
 msgstr ""
 
-#: files/templates/admin/base.html:48 files/templates/base/base.html:25
-msgid "menu_home"
+#: files/templates/admin/base.html:48 files/templates/base/base.html:22
+msgid "Home"
 msgstr ""
 
-#: files/templates/base/base.html:15
-msgid "menu_togglenav"
+#: files/templates/base/base.html:12
+msgid "Toggle Nav"
 msgstr ""
 
-#: files/templates/base/base.html:26
-msgid "menu_joblistings"
+#: files/templates/base/base.html:23
+msgid "Listings"
 msgstr ""
 
-#: files/templates/base/base.html:27
-msgid "menu_contacts"
+#: files/templates/base/base.html:24
+msgid "Contacts"
 msgstr ""
 
-#: files/templates/base/base.html:28
-msgid "menu_links"
+#: files/templates/base/base.html:25
+msgid "Job Boards"
 msgstr ""
 
-#: files/templates/base/base.html:45
-msgid "menu_help"
+#: files/templates/base/base.html:42
+msgid "Help"
 msgstr ""
 
-#: files/templates/base/base.html:46
-msgid "menu_settings"
+#: files/templates/base/base.html:43
+msgid "Settings"
 msgstr ""

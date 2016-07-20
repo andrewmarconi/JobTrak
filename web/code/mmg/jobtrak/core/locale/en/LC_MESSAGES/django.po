@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: JobTrak\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-04 15:32-0400\n"
+"POT-Creation-Date: 2016-07-20 13:31-0400\n"
 "PO-Revision-Date: 2015-01-27 00:19-0500\n"
 "Last-Translator: Andrew Marconi <andrew@marconimedia.com>\n"
 "Language-Team: MMG <info@marconimedia.com>\n"
@@ -85,29 +85,29 @@ msgid "History Items"
 msgstr "History Items"
 
 #: mmg/jobtrak/core/templates/jobtrak.core/index.html:3
-msgid "pagename_home"
-msgstr ""
-
-#: mmg/jobtrak/core/templates/jobtrak.core/index.html:3
-#: mmg/jobtrak/core/templates/jobtrak.core/job_list.html:3
-#: mmg/jobtrak/core/templates/jobtrak.core/link_list.html:3
-msgid "app_title"
-msgstr ""
-
-#: mmg/jobtrak/core/templates/jobtrak.core/job_list.html:3
-#: mmg/jobtrak/core/templates/jobtrak.core/job_list.html:7
-msgid "menu_joblistings"
-msgstr ""
-
 #: mmg/jobtrak/core/templates/jobtrak.core/job_list.html:6
 #: mmg/jobtrak/core/templates/jobtrak.core/link_list.html:6
-msgid "menu_home"
+msgid "Home"
 msgstr ""
+
+#: mmg/jobtrak/core/templates/jobtrak.core/job_list.html:3
+#, fuzzy
+#| msgid "Job Listing"
+msgid "Listings"
+msgstr "Job Listing"
+
+#: mmg/jobtrak/core/templates/jobtrak.core/job_list.html:7
+#, fuzzy
+#| msgid "Job Listing"
+msgid "Job Listings"
+msgstr "Job Listing"
 
 #: mmg/jobtrak/core/templates/jobtrak.core/link_list.html:3
 #: mmg/jobtrak/core/templates/jobtrak.core/link_list.html:7
-msgid "menu_links"
-msgstr ""
+#, fuzzy
+#| msgid "Job Status"
+msgid "Job Boards"
+msgstr "Job Status"
 
 #, fuzzy
 #~| msgid "Contact"

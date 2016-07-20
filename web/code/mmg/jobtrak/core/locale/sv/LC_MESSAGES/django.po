@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-04 15:32-0400\n"
+"POT-Creation-Date: 2016-07-20 13:32-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -86,26 +86,20 @@ msgid "History Items"
 msgstr ""
 
 #: mmg/jobtrak/core/templates/jobtrak.core/index.html:3
-msgid "pagename_home"
-msgstr ""
-
-#: mmg/jobtrak/core/templates/jobtrak.core/index.html:3
-#: mmg/jobtrak/core/templates/jobtrak.core/job_list.html:3
-#: mmg/jobtrak/core/templates/jobtrak.core/link_list.html:3
-msgid "app_title"
-msgstr ""
-
-#: mmg/jobtrak/core/templates/jobtrak.core/job_list.html:3
-#: mmg/jobtrak/core/templates/jobtrak.core/job_list.html:7
-msgid "menu_joblistings"
-msgstr ""
-
 #: mmg/jobtrak/core/templates/jobtrak.core/job_list.html:6
 #: mmg/jobtrak/core/templates/jobtrak.core/link_list.html:6
-msgid "menu_home"
+msgid "Home"
+msgstr ""
+
+#: mmg/jobtrak/core/templates/jobtrak.core/job_list.html:3
+msgid "Listings"
+msgstr ""
+
+#: mmg/jobtrak/core/templates/jobtrak.core/job_list.html:7
+msgid "Job Listings"
 msgstr ""
 
 #: mmg/jobtrak/core/templates/jobtrak.core/link_list.html:3
 #: mmg/jobtrak/core/templates/jobtrak.core/link_list.html:7
-msgid "menu_links"
+msgid "Job Boards"
 msgstr ""

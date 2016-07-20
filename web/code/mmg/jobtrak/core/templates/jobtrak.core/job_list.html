@@ -1,10 +1,10 @@
 {% extends "base/base.html" %}
 {% load i18n %}
-{% block title %}{% trans 'menu_joblistings' %} | {% trans 'app_title' %}{% endblock %}
+{% block title %}{% trans 'Listings' %}{% endblock %}
 
 {% block breadcrumb %}<ol class="breadcrumb">
-  <li><a href="{% url 'core:index' %}">{% trans 'menu_home' %}</a></li>
-  <li class="active">{% trans 'menu_joblistings' %}</li>
+  <li><a href="{% url 'core:index' %}">{% trans 'Home' %}</a></li>
+  <li class="active">{% trans 'Job Listings' %}</li>
 </ol>{% endblock %}
 
 
