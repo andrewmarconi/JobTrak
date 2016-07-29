@@ -8,6 +8,7 @@ urlpatterns = [
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 #    url(r'^admin/', include(admin.site.urls)),
     url(r'^admin/', include (JobTrakAdmin.urls)),
+    url(r'', include('external_urls.urls')),
 ]
 
 urlpatterns += i18n.i18n_patterns(

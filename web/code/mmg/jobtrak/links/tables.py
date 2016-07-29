@@ -1,29 +1,21 @@
 import django_tables2 as tables
-from django_tables2.utils import A
+from django_tables2.utils import A, Accessor
 from mmg.jobtrak.links.models import *
 from django.utils.translation import ugettext_lazy as _
-
-# class ContactTable(tables.Table):
-#     get_name_lastfirst = tables.LinkColumn(
-#         'contact:contact_detail',
-#         args=[A('pk')],
-#         order_by=('last_name','first_name'),
-#         verbose_name="Name"
-#     )
-#     title = tables.Column(verbose_name="Title")
-#     company = tables.Column(verbose_name="Company")
-#     contact_type = tables.Column(verbose_name="Contact Type")
-#     get_last_contact = tables.DateTimeColumn()
-
+import external_urls
 
 class JobBoardTable(tables.Table):
-    name = tables.Column()
-    url = tables.URLColumn()
+    url = tables.TemplateColumn(
+        '<a href="{% load external_urls %}{% external_url record.url %}" target="_blank">{{record.name}}</a>',
+        verbose_name="Web Site", order_by=A('name')
+        )
+    last_click = tables.DateTimeColumn(
+        format="D, j N",
+        verbose_name="Last Visit",
+        attrs={'td': {'nowrap': 'nowrap'}} )
     note = tables.Column(verbose_name="Description")
 
     class Meta:
         model = JobBoard
-        attrs = {
-            "class": "table table-condensed"
-        }
-        fields = ('name','note','url',)
+        attrs = { "class": "table" }
+        fields = ('url','last_click','note',)

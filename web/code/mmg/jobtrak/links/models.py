@@ -43,8 +43,10 @@ class JobBoard(models.Model):
     name = models.CharField(_("Name"), max_length=128)
     note = models.TextField(_("Note"), blank=True)
     url = models.URLField(_("URL"))
+    last_click = models.DateTimeField(blank=True, null=True)
     class Meta:
         verbose_name=_("Job Board")
         verbose_name_plural=(_("Job Boards"))
+        ordering=["name",]
     def __unicode__(self):
         return self.name

@@ -31,9 +31,12 @@ INSTALLED_APPS = (
 	'django.contrib.messages',
 	'django.contrib.staticfiles',
 	'django.contrib.humanize',
+#	'django.contrib.redirects',
+#	'redirect_plus',
 	'django_extensions',
 	'bootstrap3',
 	'django_tables2',
+	'external_urls',
 	'mmg.jobtrak.util',
 	'mmg.jobtrak.core',
 	'mmg.jobtrak.links',
@@ -58,6 +61,8 @@ MIDDLEWARE_CLASSES = (
 	'django.middleware.clickjacking.XFrameOptionsMiddleware',
 	'django.contrib.admindocs.middleware.XViewMiddleware',
 	'django.middleware.locale.LocaleMiddleware',
+#	'redirect_plus.middleware.RedirectFallbackMiddleware',
+#	'redirect_plus.middleware.RedirectForceMiddleware',
 )
 
 # GRAPH_MODELS = {

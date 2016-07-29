@@ -14,7 +14,9 @@ class WebLinkTypeAdmin(admin.ModelAdmin):
     ]
 
 class JobBoardAdmin(admin.ModelAdmin):
-    pass
+    list_display=[
+        'name','url','last_click',
+    ]
 
 JobTrakAdmin.register(WebLinkAccount, WebLinkAccountAdmin)
 JobTrakAdmin.register(WebLinkType, WebLinkTypeAdmin)
