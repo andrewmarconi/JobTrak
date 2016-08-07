@@ -1,5 +1,6 @@
 {% extends "base/base.html" %}
-{% load i18n %}
+{% load i18n external_urls %}
+{% load render_table from django_tables2 %}
 {% block title %}{% trans 'Listings' %}{% endblock %}
 
 {% block breadcrumb %}<ol class="breadcrumb">
@@ -7,7 +8,12 @@
   <li class="active">{% trans 'Job Listings' %}</li>
 </ol>{% endblock %}
 
-
 {% block content %}
-[Job Listings]
+
+<div class="row">
+  <div class="col-md-12">
+    {% render_table jtable %}
+  </div>
+</div>
+
 {% endblock %}

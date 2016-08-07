@@ -44,6 +44,7 @@ class JobBoard(models.Model):
     note = models.TextField(_("Note"), blank=True)
     url = models.URLField(_("URL"))
     last_click = models.DateTimeField(blank=True, null=True)
+    url_regex = models.CharField(_("URL Regex"), blank=True, default="", max_length=180)
     class Meta:
         verbose_name=_("Job Board")
         verbose_name_plural=(_("Job Boards"))

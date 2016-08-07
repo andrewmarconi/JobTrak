@@ -1,0 +1,60 @@
+{% extends "base/base.html" %}
+{% load i18n mmg humanize %}
+{% block title %}{% trans 'Job Detail' %}{% endblock %}
+
+{% block breadcrumb %}<ol class="breadcrumb">
+  <li><a href="{% url 'core:index' %}">{% trans 'Home' %}</a></li>
+  <li><a href="{% url 'core:job_list' %}">{% trans 'Job Listings' %}</a></li>
+  <li class="active">{{ job.company.company }} - {{ job.name }}</li>
+</ol>{% endblock %}
+
+
+{% block content %}
+<div class="row">
+  <div class="col-md-10">
+    <h1>
+      {{ job.name }}
+      <small>{{ job.company.company }}</small>
+    </h1>
+  </div>
+  <div class="col-md-2 text-right">
+    <a href="{% url 'admin:core_joblisting_change' job.id %}" class="btn btn-default btn-sm">Edit</a>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-3">
+    <table class="table">
+      <tr>
+        <td class="text-right">Location:</td>
+        <td>{{job.company.name}}</td>
+      </tr>
+      <tr>
+        <td class="text-right">Status:</td>
+        <td>{{job.status}}</td>
+      </tr>
+      <tr>
+        <td class="text-right">Posted:</td>
+        <td>{{job.date_posted|naturalday}}</td>
+      </tr>
+      <tr>
+        <td class="text-right">Last Touch:</td>
+        <td>{{job.get_last_touch|naturalday}}</td>
+      </tr>
+      <tr>
+        <td class="text-right">Source:</td>
+        <td><a href="{{ job.sourceURL }}" target="_blank">View on {{job.sourceSite}}</a></td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="col-lg-9">
+    <div class="panel panel-default">
+      <div class="panel-heading">Description</div>
+      <div class="panel-body">
+        {{ job.description|markdownify|safe }}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
