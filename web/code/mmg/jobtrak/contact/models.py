@@ -185,19 +185,20 @@ class Contact(models.Model):
 
     def get_last_contact(self):
         return 0
-#        try:
-            # TODO Fix this bug. It won't collect the latest
-#        hist=ActionHistory.objects.filter(who__exact=self)
-#        rv=hist.latest()
-#        return rv
-#        except DoesNotExist:
-#            rv=None
-#        except MultipleObjectsReturned:
-#            rv=None
-#        except:
-#            rv=None
-#        return None
+    #     try:
+    #         # TODO Fix this bug. It won't collect the latest
+    #    hist=ActionHistory.objects.filter(who__exact=self)
+    #    rv=hist.latest()
+    #    return rv
+    #    except DoesNotExist:
+    #        rv=None
+    #    except MultipleObjectsReturned:
+    #        rv=None
+    #    except:
+    #        rv=None
+    #    return None
     get_last_contact.short_description=ugettext_lazy('Last Contact')
 
     def __unicode__(self):
-        return ' '.join([self.company.company.name, u'-', self.company.name, u'-',self.first_name, self.last_name])
+        # return ' '.join([self.company.company.name, u'-', self.company.name, u'-',self.first_name, self.last_name])
+        return "{} {} / {}".format(self.first_name, self.last_name, self.title)

@@ -46,7 +46,7 @@ class ContactHistoryInline(admin.TabularInline):
     extra=1
 
 class ContactAdmin(admin.ModelAdmin):
-    list_display=('get_name_lastfirst','company','title','contact_type','get_last_contact')
+    list_display=('get_name_lastfirst','title','contact_type','get_last_contact')
     list_filter=['company__company','contact_type']
     fieldsets=[
         (None, {
@@ -88,7 +88,8 @@ class JobListingHistoryInline(admin.TabularInline):
 #         return field
 
 class JobListingAdmin(admin.ModelAdmin):
-    list_display=('name','company','status','sourceSite','get_last_touch')
+    list_display=('name','get_company_name','get_company_location',
+                  'status','sourceSite','get_last_touch')
     list_filter=[
         ('sourceSite', admin.RelatedOnlyFieldListFilter),
         ('company__company', admin.RelatedOnlyFieldListFilter),
@@ -104,12 +105,19 @@ class JobListingAdmin(admin.ModelAdmin):
             ]
         }),
     ]
-
     inlines=[JobListingPersonInline,JobListingHistoryInline]
+
+    def get_company_name(self, obj):
+        return obj.company.company.name
+    get_company_name.short_description="Company"
+
+    def get_company_location(self, obj):
+        return obj.company.name
+    get_company_location.short_description="Location"
+
     # def get_form(self, request, obj=None, **kwargs):
     #    request._obj_ = obj
     #    return super(JobListingAdmin, self).get_form(request, obj, **kwargs)
-
 
 
 # class LimitedAdminInlineMixin(object):
