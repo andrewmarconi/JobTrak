@@ -1,5 +1,8 @@
 # JobTrak
 
+[![Build Status](https://travis-ci.org/MarconiMediaGroup/JobTrak.svg?branch=master)](https://travis-ci.org/MarconiMediaGroup/JobTrak)
+
+
 [![Release](https://img.shields.io/github/release/MarconiMediaGroup/JobTrak.svg)](https://github.com/MarconiMediaGroup/JobTrak/releases)
 [![Issues](https://img.shields.io/github/issues/MarconiMediaGroup/JobTrak.svg)](https://github.com/MarconiMediaGroup/JobTrak/issues)
 
