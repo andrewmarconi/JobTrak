@@ -15,7 +15,7 @@ def index(request):
         return redirect(reverse('public.views.index'))
     else:
         jbtable = JobBoardTable(JobBoard.objects.all())
-        jbtable.paginate(page=request.GET.get('page', 1), per_page=50)
+        jbtable.paginate(page=request.GET.get('page', 1), per_page=20)
         RequestConfig(request).configure(jbtable)
         context = {"jbtable": jbtable}
         # links = JobBoard.objects.all()

@@ -15,9 +15,12 @@ class JobListingTable(tables.Table):
         format="D, j N",
         verbose_name="Posted"
     )
-    last_touch = tables.DateTimeColumn(
+    get_last_touch = tables.DateTimeColumn(
         format="D, j N",
-        verbose_name="Last Touched"
+        verbose_name="Updated"
+    )
+    can_be_remote = tables.BooleanColumn(
+        verbose_name="Remote?"
     )
     class Meta:
         model = JobListing
@@ -27,9 +30,10 @@ class JobListingTable(tables.Table):
             "company",
             "status",
             "sourceSite",
+            "can_be_remote",
             "date_posted",
-            "last_touch",
+            "get_last_touch",
         )
         fields = {
-            "name", "company", "status", "sourceSite", "date_posted", "last_touch",
+            "name", "company", "status", "sourceSite", "can_be_remote", "date_posted", "get_last_touch",
         }

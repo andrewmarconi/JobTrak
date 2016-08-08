@@ -89,14 +89,22 @@ class JobListingHistoryInline(admin.TabularInline):
 
 class JobListingAdmin(admin.ModelAdmin):
     list_display=('name','company','status','sourceSite','get_last_touch')
-    list_filter=['sourceSite', 'company__company']
+    list_filter=[
+        ('sourceSite', admin.RelatedOnlyFieldListFilter),
+        ('company__company', admin.RelatedOnlyFieldListFilter),
+        ('status', admin.RelatedOnlyFieldListFilter),
+        ]
     fieldsets=[
         (None, {
-            'fields':
-                ['name','company','sourceSite','date_posted','status','description','sourceURL']
+            'fields': [
+                'name','company','sourceSite',
+                'date_posted','status','description','sourceURL',
+                'salary_range','can_be_remote',
+                'job_function', 'employment_type', 'area_of_focus',
+            ]
         }),
     ]
-#    inlines=[JobListingHistoryInline]
+
     inlines=[JobListingPersonInline,JobListingHistoryInline]
     # def get_form(self, request, obj=None, **kwargs):
     #    request._obj_ = obj

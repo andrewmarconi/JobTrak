@@ -23,37 +23,97 @@
 </div>
 <div class="row">
   <div class="col-md-3">
-    <table class="table">
-      <tr>
-        <td class="text-right">Location:</td>
-        <td>{{job.company.name}}</td>
-      </tr>
-      <tr>
-        <td class="text-right">Status:</td>
-        <td>{{job.status}}</td>
-      </tr>
-      <tr>
-        <td class="text-right">Posted:</td>
-        <td>{{job.date_posted|naturalday}}</td>
-      </tr>
-      <tr>
-        <td class="text-right">Last Touch:</td>
-        <td>{{job.get_last_touch|naturalday}}</td>
-      </tr>
-      <tr>
-        <td class="text-right">Source:</td>
-        <td><a href="{{ job.sourceURL }}" target="_blank">View on {{job.sourceSite}}</a></td>
-      </tr>
-    </table>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Job Details</h3>
+      </div>
+      <div class="panel-body">
+        <table class="table">
+          <tr>
+            <td colspan=2><strong>Location:</strong><br/>{{job.company.name}}</td>
+          </tr>
+          <tr>
+            <td colspan=2><strong>Employment Type:</strong><br/>
+              {{job.employment_type|tag_to_list|safe}}</td>
+          </tr>
+          <tr>
+            <td class="text-right"><strong>Status:</strong></td>
+            <td>{{job.status}}</td>
+          </tr>
+          <tr>
+            <td class="text-right"><strong>Salary Range:</strong></td>
+            <td>{{job.salary_range}}</td>
+          </tr>
+          <tr>
+            <td class="text-right"><strong>Remote OK?</strong></td>
+            <td>
+            {% if job.can_be_remote %}
+              <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Yep
+            {% else %}
+              <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Nope
+            {% endif %}
+          </td>
+          </tr>
+          <tr>
+            <td class="text-right"><strong>Posted:</strong></td>
+            <td>{{job.date_posted|naturalday|title}}</td>
+          </tr>
+          <tr>
+            <td class="text-right"><strong>Last Touched:</strong></td>
+            <td>{{job.get_last_touch|naturalday|title}}</td>
+          </tr>
+          <tr>
+            <td class="text-right"><strong>Source:</strong></td>
+            <td><a href="{{ job.sourceURL }}" target="_blank">{{job.sourceSite}}</a></td>
+          </tr>
+          <tr>
+            <td colspan=2><strong>Job Function(s):</strong><br/>{{job.job_function|tag_to_list|safe}}</td>
+          </tr>
+          <tr>
+            <td colspan=2><strong>Area(s) of Focus:</strong><br/>{{job.area_of_focus|tag_to_list|safe}}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
   </div>
 
   <div class="col-lg-9">
-    <div class="panel panel-default">
-      <div class="panel-heading">Description</div>
-      <div class="panel-body">
-        {{ job.description|markdownify|safe }}
+
+    <div>
+
+      <ul class="nav nav-tabs" role="tablist" data-toggle="tab">
+        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Description</a></li>
+        <li role="presentation"><a href="#history" aria-controls="history" role="tab" data-toggle="tab">History ({{ job.get_history.count }})</a></li>
+      </ul>
+
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="home">
+          <div style="padding: 2em;">
+          {{ job.description|markdownify|safe }}
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="history">
+          <div style="padding: 2em;">
+            <table class="table table-striped">
+              <tr>
+                <th>When</th>
+                <th>Note</th>
+              </tr>
+              {% for hi in job.get_history %}
+              <tr>
+                <td>{{ hi.when }}</td>
+                <td>{{ hi.who }} - {{ hi.note }}</td>
+              </tr>
+              {% endfor %}
+            </table>
+          </div>
+        </div>
       </div>
+
     </div>
+
+
+
   </div>
 </div>
 

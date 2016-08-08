@@ -42,11 +42,21 @@ class JobListing(models.Model):
     date_posted=models.DateField(blank=True, null=True)
     description=models.TextField(blank=True, null=True)
     company=models.ForeignKey(CompanyLocation, blank=True, null=True)
+    salary_range=models.CharField(max_length=32, default="")
+    can_be_remote=models.BooleanField(default=False)
+    employment_type=models.CharField(max_length=250, default="", blank=True)
+    area_of_focus=models.CharField(max_length=500, default="", blank=True)
+    job_function=models.CharField(max_length=500, default="", blank=True)
 
     def get_last_touch(self):
         rv=ActionHistory.objects.filter(joblisting__exact=self).latest().when
         return rv
     get_last_touch.short_description="Last Contact"
+
+    def get_history(self):
+        rv=ActionHistory.objects.filter(joblisting__exact=self)
+        return rv
+    get_history.short_description="Full History"
 
     class Meta:
         verbose_name='Job Listing'

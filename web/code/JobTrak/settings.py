@@ -31,10 +31,9 @@ INSTALLED_APPS = (
 	'django.contrib.messages',
 	'django.contrib.staticfiles',
 	'django.contrib.humanize',
-#	'django.contrib.redirects',
-#	'redirect_plus',
 	'django_extensions',
 	'bootstrap3',
+	'taggit',
 	'django_tables2',
 	'external_urls',
 	'mmg.jobtrak.util',
@@ -167,6 +166,7 @@ LOCALE_PATHS = (
 	os.path.join(BASE_DIR,'mmg','jobtrak','public'),
 	os.path.join(BASE_DIR,'mmg','jobtrak','util'),
 )
+
 
 STATICFILES_DIRS = (
 	('libs',os.path.join(BASE_DIR,'libs')),
