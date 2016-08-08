@@ -21,9 +21,9 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 INSTALLED_APPS = (
-#	'grappelli',
-#	'django.contrib.admin',
-	'django.contrib.admin.apps.SimpleAdminConfig',
+	'grappelli',
+	'django.contrib.admin',
+#	'django.contrib.admin.apps.SimpleAdminConfig',
 	'django.contrib.admindocs',
 	'django.contrib.auth',
 	'django.contrib.contenttypes',
@@ -60,14 +60,7 @@ MIDDLEWARE_CLASSES = (
 	'django.middleware.clickjacking.XFrameOptionsMiddleware',
 	'django.contrib.admindocs.middleware.XViewMiddleware',
 	'django.middleware.locale.LocaleMiddleware',
-#	'redirect_plus.middleware.RedirectFallbackMiddleware',
-#	'redirect_plus.middleware.RedirectForceMiddleware',
 )
-
-# GRAPH_MODELS = {
-#	 'all_applications': True,
-#	 'group_models': True,
-# }
 
 BOOTSTRAP3 = {
 	'jquery_url': '//code.jquery.com/jquery.min.js',
@@ -107,10 +100,10 @@ TEMPLATES = [
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
-                'django.core.context_processors.media',
-                'django.core.context_processors.static',
-                'django.core.context_processors.tz',
-                'django.core.context_processors.i18n',
+                'django.template.context_processors.media',
+                'django.template.context_processors.static',
+                'django.template.context_processors.tz',
+                'django.template.context_processors.i18n',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
@@ -140,6 +133,10 @@ USE_THOUSAND_SEPARATOR = True
 # LANGUAGE_COOKIE_NAME = 'jobtrak_l'
 # CSRF_COOKIE_NAME = 'jobtrak_c'
 # SESSION_COOKIE_NAME = 'jobtrak_s'
+
+GRAPPELLI_ADMIN_TITLE = "JobTrak"
+GRAPPELLI_AUTOCOMPLETE_LIMIT = 10
+GRAPPELLI_SWITCH_USER = True
 
 ugettext = lambda s: s
 
