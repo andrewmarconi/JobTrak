@@ -12,6 +12,6 @@
 
 See the [JobTrak Wiki](https://github.com/MarconiMediaGroup/JobTrak/wiki) for details.
 
-## Compatibility
+## Known Compatibility Issues
 
-Some required packages crash when installed under Python 3.x -- so for the time being, we're only targeting Python 2.7.x.
+- Some required packages crash when installed under Python 3.x -- so for the time being, we're only targeting Python 2.7.x.
