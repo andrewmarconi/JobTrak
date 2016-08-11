@@ -1,2 +1,7 @@
-{% extends 'bootstrap3/bootstrap3.html' %}
+{% extends 'bootstrap3/bootstrap3.html' %}{% load static from staticfiles %}
+{% block bootstrap3_extra_head %}
+<link href="https://fonts.googleapis.com/css?family=Alegreya|Ruda" rel="stylesheet">
+<link href="{% static 'libs/theme.css'  %}" rel="stylesheet">
+{% endblock %}
+
 {% block bootstrap3_title %}{% block title %}{% endblock %} | JobTrak{% endblock %}
