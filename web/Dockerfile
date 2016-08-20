@@ -10,7 +10,7 @@ RUN mkdir /root/.ptpython && touch /root/.ptpython/config.py
 
 WORKDIR /app/code
 
-RUN apt-get update -y && apt-get install apt-utils gettext -y
+RUN apt-get update -y && apt-get install apt-utils gettext graphiviz -y
 
 ADD ./code/requirements.txt /app/code/requirements.txt
 
