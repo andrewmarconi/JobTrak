@@ -1,36 +1,31 @@
 version: '2'
+
 services:
-  gabledb:
+
+  db:
+    container_name: db
     image: postgres
-    container_name: gabledb
     volumes:
-      - gabledb:/run
+      - vol_db:/run
     environment:
       - POSTGRES_DB=postgres
       - POSTGRES_NAME=postgres
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
 
-  gableweb:
-    container_name: gableweb
+  web:
+    container_name: web
     build: web
-    command: python /app/code/manage.py runserver_plus 0.0.0.0:8002
+    command: python /app/code/manage.py runserver_plus 0.0.0.0:80
     volumes:
       - ./web/code:/app/code
       - ./web/support:/app/support
+      - ./web/site-packages:/usr/local/lib/python2.7/site-packages
     ports:
-      - "8002:8002"
+      - "8012:80"
     depends_on:
-      - gabledb
-    environment:
-      - VIRTUAL_HOST=gable.dev.559labs.net
-      - VIRTUAL_PORT=8002
-
-networks:
-  default:
-    external:
-      name: core_default
+      - db
 
 volumes:
-  gabledb:
+  vol_db:
     driver: local

@@ -117,7 +117,7 @@ DATABASES = {
         'NAME': 'postgres',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
-        'HOST': 'gabledb',
+        'HOST': 'db',
         'PORT': 5432,
     }
 }

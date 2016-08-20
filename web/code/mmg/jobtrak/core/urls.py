@@ -1,4 +1,4 @@
-from django.conf.urls import patterns, include, url, i18n
+from django.conf.urls import include, url, i18n
 from mmg.jobtrak.core import views
 
 urlpatterns = [
