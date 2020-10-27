@@ -1,7 +1,7 @@
 beautifulsoup4==4.4.1
 cffi==1.7.0
 configparser==3.5.0
-cryptography==1.4
+cryptography==3.2
 dj-database-url==0.4.1
 dj-static==0.0.6
 Django==1.10
